@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بيت التحفيات | متجر التحف</title>
+
+  <!-- Cairo Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">B</div>
+        <div class="brand__text">
+          <div class="brand__title">بيت التحفيات</div>
+          <div class="brand__sub">متجر التحف والقطع النادرة</div>
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="iconbtn" id="themeBtn" type="button" aria-label="تبديل المظهر">
+          <span class="icon">☾</span>
+        </button>
+        <a class="primarybtn" href="#" id="whatsAppQuick">تواصل واتساب</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <h1>اقتني قطعة تروي تاريخ </h1>
+        <p>
+          استكشف تصنيفاتنا: سجاد، فضة، نحاس، لوحات، أعمال فنية، كريستال.
+          اطلب القطعة مباشرة عبر واتساب خلال ثوانٍ.
+        </p>
+
+        <div class="hero__search">
+          <div class="searchbox">
+            <span class="searchbox__icon">⌕</span>
+            <input id="searchInput" type="search" placeholder="ابحث بأسم القطعة أو الكود..." autocomplete="off" />
+          </div>
+
+          <div class="chips" id="categoryChips" aria-label="التصنيفات">
+            <!-- chips injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="hero__stat">
+          <div class="hero__statNum" id="countItems">0</div>
+          <div class="hero__statLabel">قطعة معروضة</div>
+        </div>
+
+        <div class="hero__note">
+          <div class="hero__noteTitle">عن القطع المعروضة</div>
+          <div class="hero__noteText">
+           كل قطعة في بيت التحفيات تحمل أثر زمن، ويبدأ الاقتناء من إدراك قيمتها قبل امتلاكها.
+          </div>
+        </div>
+
+        <div class="hero__mini">
+          <div class="miniRow"><span> 🕰️ بيت التحفيات مساحة للذاكرة قبل العرض</span><span></span></div>
+          <div class="miniRow"><span>🧾 المعلومة والتوثيق جزء من القصة</span><span></span></div>
+          <div class="miniRow"><span>🌿 نرافقك في تجربة الاقتناء بهدوء</span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <main class="container main">
+    <div class="toolbar">
+      <div class="toolbar__left">
+        <div class="toolbar__title">القطع المتاحة</div>
+        <div class="toolbar__subtitle" id="resultsHint">—</div>
+      </div>
+
+      <div class="toolbar__right">
+        <label class="select">
+          <span class="select__label">الترتيب</span>
+          <select id="sortSelect">
+            <option value="featured">مميز</option>
+            <option value="priceAsc">السعر: من الأقل للأعلى</option>
+            <option value="priceDesc">السعر: من الأعلى للأقل</option>
+            <option value="newest">الأحدث</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <section class="grid" id="productsGrid" aria-live="polite">
+      <!-- cards injected by JS -->
+    </section>
+  </main>
+
+  <!-- Product Modal -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-close="true" aria-label="إغلاق">✕</button>
+
+      <div class="modal__content">
+        <div class="modal__media">
+          <img id="modalImg" alt="صورة القطعة" />
+        </div>
+
+        <div class="modal__details">
+          <div class="badgesRow">
+            <div class="badge" id="modalCategory">—</div>
+            <div class="badge status-badge" id="modalStatus">—</div>
+          </div>
+
+          <h2 id="modalTitle">—</h2>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">الكود</span>
+              <span class="meta__value" id="modalCode">—</span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">السعر</span>
+              <span class="meta__value" id="modalPrice">—</span>
+            </div>
+          </div>
+
+          <p class="desc" id="modalDesc">—</p>
+
+          <!-- مشاركة القطعة -->
+          <div class="shareRow" aria-label="مشاركة القطعة">
+            <button class="ghostbtn" type="button" id="shareWAItemBtn">مشاركة واتساب</button>
+            <button class="ghostbtn" type="button" id="copyLinkBtn">نسخ الرابط</button>
+            <button class="ghostbtn" type="button" id="nativeShareBtn">مشاركة</button>
+          </div>
+
+          <hr class="sep" />
+
+          <h3 class="formTitle">بيانات الزبون</h3>
+
+          <form class="form" id="orderForm">
+            <div class="form__row">
+              <label>
+                <span>الاسم الكامل</span>
+                <input type="text" id="custName" required placeholder="مثال : طارق محمد علي ">
+              </label>
+
+              <label>
+                <span>رقم الهاتف</span>
+                <input type="tel" id="custPhone" required placeholder="07xxxxxxxxx">
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label>
+                <span>المحافظة</span>
+                <input type="text" id="custGov" required placeholder="مثال: بغداد">
+              </label>
+
+              <label>
+                <span>المنطقة</span>
+                <input type="text" id="custArea" required placeholder="مثال: ابو نؤاس ">
+              </label>
+            </div>
+
+            <label>
+              <span>أقرب نقطة دالة</span>
+              <input type="text" id="custLandmark" placeholder="مثال: قرب مجمع كورنيش ابو نؤاس">
+            </label>
+
+            <label>
+              <span>ملاحظات (اختياري)</span>
+              <textarea id="custNote" rows="3" placeholder="مثال: التوصيل صباحاً / تغليف هدية..."></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="primarybtn" type="submit" id="orderSubmitBtn">اطلب عبر واتساب</button>
+              <button class="ghostbtn" type="button" id="copyDetailsBtn">نسخ تفاصيل الطلب</button>
+            </div>
+
+            <div class="status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> بيت التحفيات</div>
+      <div class="footer__links">
+        <a href="#" id="footerWhatsApp">house of antiqes</a>
+        <span class="dot">•</span>
+        <span> بغدا- ابو نؤاس / للذاكرة، للتوثيق، وللأثر</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Mobile Fixed Order Button (لازم داخل body) -->
+  <button id="mobileOrderBtn" class="mobile-order-btn" type="button">اطلب الآن</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
