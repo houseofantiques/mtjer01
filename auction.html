@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="auction_page_title">بيت التحفيات | المزاد</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-page="auction">
+  <div class="overlay"></div>
+
+  <div class="app">
+    <div class="shell">
+
+      <!-- ✅ TOPBAR -->
+      <header class="topbar">
+        <div class="brand">
+          <div class="mark">
+            <img src="logo.png" alt="شعار بيت التحفيات">
+          </div>
+
+          <div class="brandText">
+            <div class="brandName" data-i18n="auction_title">قطع المزاد</div>
+            <div class="brandSub" data-i18n="store_tagline">حيث تتحوّل القطع إلى حكايات</div>
+          </div>
+        </div>
+
+        <div class="topActions">
+          <a class="btn ghost" href="index.html" data-i18n="back_to_store">الرجوع للمتجر</a>
+
+          <div class="langBox">
+            <span class="langLabel" data-i18n="lang_label">اللغة</span>
+            <select id="langSelect" class="langSelect" aria-label="Language">
+              <option value="ar" data-i18n="lang_ar">AR</option>
+              <option value="en" data-i18n="lang_en">EN</option>
+              <option value="ku" data-i18n="lang_ku">KU</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <!-- ✅ HERO (Compact Auction Search + Filters) -->
+      <section class="hero compact">
+        <div class="heroText">
+          <div class="searchRow">
+            <input
+              id="searchInput"
+              class="searchInput"
+              type="search"
+              data-i18n-placeholder="search_placeholder"
+              placeholder="ابحث باسم القطعة أو الكود..."
+            />
+            <div class="resultsCount" id="resultsCount">0 نتائج</div>
+          </div>
+
+          <div class="chipsHeader">
+            <div class="chipsTitle" data-i18n="categories">التصنيفات</div>
+          </div>
+          <div class="chipsWrap" id="chipsWrap"></div>
+
+          <div class="filtersRow">
+            <div class="filter">
+              <label class="filterLabel" for="sortSelect" data-i18n="sort_label">الترتيب</label>
+              <select id="sortSelect" class="filterSelect">
+                <option value="featured" data-i18n="sort_featured">مميز</option>
+                <option value="newest" data-i18n="sort_newest">الأحدث</option>
+                <option value="priceAsc" data-i18n="sort_price_asc">السعر: الأقل</option>
+                <option value="priceDesc" data-i18n="sort_price_desc">السعر: الأعلى</option>
+              </select>
+            </div>
+
+            <div class="filter">
+              <label class="filterLabel" for="showSelect" data-i18n="show_label">عرض</label>
+              <select id="showSelect" class="filterSelect">
+                <option value="all" data-i18n="show_all">الكل</option>
+                <option value="fav" data-i18n="show_favorites">المفضلة</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ✅ GRID -->
+      <section class="gridSection">
+        <div id="emptyState" class="emptyState" style="display:none;">
+          <div class="emptyTitle" data-i18n="no_results">لا يوجد نتائج</div>
+          <div class="emptySub" data-i18n="try_filter">جرّب تبدّيل التصنيف أو تقليل كلمات البحث.</div>
+        </div>
+
+        <div class="productsGrid" id="productsGrid"></div>
+      </section>
+
+      <!-- ✅ FOOTER -->
+      <footer class="footer">
+        <div class="footerBrand" data-i18n="footer_brand">بيت التحفيات</div>
+        <div class="footerTag" data-i18n="footer_tagline">بغداد - أبو نؤاس / للذاكرة، للتوثيق، وللأثر</div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ✅ MODAL (same as store) -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modalDialog" role="dialog" aria-modal="true">
+      <button class="modalClose" id="modalClose" type="button" data-i18n="close">إغلاق</button>
+
+      <div class="modalHead">
+        <div class="modalTitleRow">
+          <h3 class="modalTitle" id="modalTitle">—</h3>
+          <span class="badge auction" id="modalBadge" style="display:none;">مزاد</span>
+        </div>
+
+        <div class="modalMeta">
+          <div class="metaLine"><span class="metaK" data-i18n="code_label">الكود</span> <span class="metaV" id="modalCode">—</span></div>
+          <div class="metaLine"><span class="metaK" data-i18n="price_label">السعر</span> <span class="metaV" id="modalPrice">—</span></div>
+          <div class="metaLine"><span class="metaK">Status</span> <span class="metaV" id="modalStatus">—</span></div>
+        </div>
+
+        <div class="modalTabs" role="tablist" aria-label="tabs">
+          <button class="tab active" type="button" data-modal-tab="details" data-i18n="tab_details">تفاصيل</button>
+          <button class="tab" type="button" data-modal-tab="order" data-i18n="tab_order">اطلب</button>
+        </div>
+      </div>
+
+      <div class="modalBody">
+        <div class="modalCols">
+          <div class="modalLeft">
+            <div class="modalImage">
+              <img id="modalMainImg" src="" alt="" />
+            </div>
+            <div class="thumbs" id="modalThumbs"></div>
+
+            <div class="modalShare">
+              <button class="btn ghost" type="button" id="shareWaBtn" data-i18n="share_whatsapp">مشاركة واتساب</button>
+              <button class="btn ghost" type="button" id="copyLinkBtn" data-i18n="copy_link">نسخ الرابط</button>
+              <button class="btn ghost" type="button" id="favBtn">♡</button>
+            </div>
+          </div>
+
+          <div class="modalRight">
+            <section data-modal-panel="details">
+              <p class="modalDesc" id="modalDesc">—</p>
+            </section>
+
+            <section data-modal-panel="order" style="display:none;">
+              <div class="formBlock">
+                <div class="formTitle" data-i18n="customer_data">بيانات الزبون</div>
+
+                <div class="formGrid">
+                  <div class="field">
+                    <label data-i18n="full_name">الاسم الكامل</label>
+                    <input id="orderName" type="text" data-i18n-placeholder="ph_full_name" placeholder="مثال: طارق محمد علي" />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="phone">رقم الهاتف</label>
+                    <input id="orderPhone" type="tel" data-i18n-placeholder="ph_phone" placeholder="07xxxxxxxxx" />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="governorate">المحافظة</label>
+                    <input id="orderGov" type="text" data-i18n-placeholder="ph_governorate" placeholder="مثال: بغداد" />
+                  </div>
+                  <div class="field">
+                    <label data-i18n="area">المنطقة</label>
+                    <input id="orderArea" type="text" data-i18n-placeholder="ph_area" placeholder="مثال: أبو نؤاس" />
+                  </div>
+                  <div class="field full">
+                    <label data-i18n="nearest_landmark">أقرب نقطة دالة</label>
+                    <input id="orderLandmark" type="text" data-i18n-placeholder="ph_landmark" placeholder="مثال: قرب مجمع كورنيش أبو نؤاس" />
+                  </div>
+                  <div class="field full">
+                    <label data-i18n="notes_optional">ملاحظات (اختياري)</label>
+                    <textarea id="orderNotes" rows="3" data-i18n-placeholder="ph_notes" placeholder="مثال: أريد معاينة القطعة / تغليف هدية..."></textarea>
+                  </div>
+                </div>
+
+                <div class="formActions">
+                  <button class="btn primary" type="button" id="orderWhatsApp" data-i18n="order_whatsapp">اطلب عبر واتساب</button>
+                  <button class="btn ghost" type="button" id="copyOrder" data-i18n="copy_order_details">نسخ تفاصيل الطلب</button>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ✅ Translation + Products -->
+  <script src="i18n.js"></script>
+  <script src="products.js"></script>
+
+  <!-- ✅ IMPORTANT: Force Auction-only before script.js renders -->
+  <script>
+    (function(){
+      "use strict";
+
+      // علامة واضحة للصفحة (إذا script.js يستفيد منها)
+      window.__PAGE__ = "auction";
+      window.__AUCTION_ONLY__ = true;
+
+      // فلترة المنتجات (حتى لو script.js يستخدم PRODUCTS مباشرة)
+      if (Array.isArray(window.PRODUCTS)) {
+        window.PRODUCTS = window.PRODUCTS.filter(p => p && p.auction === true);
+      }
+    })();
+  </script>
+
+  <!-- ✅ Main behavior -->
+  <script src="script.js" defer></script>
+  <!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("tivoinl7MHIKAOORE"); // 🔴 بدليه بمفتاحك
+})();
+</script>
+
+</body>
+</html>
