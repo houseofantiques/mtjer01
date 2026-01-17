@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>متجر بيت التحفيات</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="brandTxt">
+        <div class="b1">بيت التحفيات</div>
+        <div class="b2">House of Antiques</div>
+      </div>
+    </div>
+
+    <div class="topActions">
+      <select id="langSelect" class="selectMini" aria-label="Language">
+        <option value="ar">AR</option>
+        <option value="en">EN</option>
+        <option value="ku">KU</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- FILTERS -->
+  <section class="filters">
+    <div class="searchRow">
+      <input id="searchInput" class="search" type="search" placeholder="ابحث بالكود أو الاسم..." />
+      <div id="resultsCount" class="count">0 نتائج</div>
+    </div>
+
+    <div id="chipsWrap" class="chips"></div>
+
+    <div class="selectsRow">
+      <select id="sortSelect" class="select" aria-label="Sort">
+        <option value="featured">Featured</option>
+        <option value="newest">Newest</option>
+        <option value="priceAsc">Price ↑</option>
+        <option value="priceDesc">Price ↓</option>
+      </select>
+
+      <select id="showSelect" class="select" aria-label="Show">
+        <option value="all">الكل</option>
+        <option value="fav">المفضلة</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <main class="page">
+    <div id="productsGrid" class="grid"></div>
+    <div id="emptyState" class="empty" style="display:none;">لا توجد نتائج</div>
+  </main>
+
+  <!-- ✅ MODAL Pinterest Free -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modalDialog" role="dialog" aria-modal="true">
+      <button class="modalClose" id="modalClose" type="button">إغلاق</button>
+
+      <div id="modalBody" class="modalBody">
+
+        <div class="pinMedia" id="pinMedia">
+          <img id="modalMainImg" src="" alt="" />
+        </div>
+
+        <div class="pinBar">
+          <div class="pinPrice" id="pinPrice">—</div>
+
+          <div class="pinIcons">
+            <button class="pinIcon" type="button" id="favBtn" aria-label="fav">♡</button>
+            <button class="pinIcon" type="button" id="shareWaBtn" aria-label="share">⤴</button>
+            <button class="pinIcon" type="button" id="copyLinkBtn" aria-label="link">⋯</button>
+          </div>
+        </div>
+
+        <div class="pinMeta">
+          <div class="pinTitleRow">
+            <h3 class="pinTitle" id="modalTitle">—</h3>
+            <span class="badge auction" id="modalBadge" style="display:none;">مزاد</span>
+          </div>
+
+          <div class="pinMini">
+            <span>Code:</span> <span id="modalCode">—</span>
+            <span class="dot">•</span>
+            <span id="modalStatus">—</span>
+          </div>
+        </div>
+
+        <div class="pinToggles">
+          <button class="toggle active" type="button" id="pinDetailsToggle">تفاصيل</button>
+          <button class="toggle" type="button" id="pinOrderToggle">اطلب</button>
+        </div>
+
+        <div class="pinDetails" id="pinDetails">
+          <div class="pinDims" id="pinDimsWrap" style="display:none;">
+            <strong>Dimensions:</strong>
+            <span id="itemDimensions"></span>
+          </div>
+
+          <div class="pinDesc is-collapsed" id="pinDesc">—</div>
+          <button class="pinMore" type="button" id="pinMoreBtn" style="display:none;">اضغط للمزيد</button>
+        </div>
+
+        <section class="pinOrder" id="pinOrderPanel" style="display:none;">
+          <div class="formTitle">بيانات الزبون</div>
+
+          <div class="formGrid">
+            <div class="field">
+              <label>الاسم الكامل</label>
+              <input id="orderName" type="text" placeholder="مثال: طارق محمد علي" />
+            </div>
+
+            <div class="field">
+              <label>رقم الهاتف</label>
+              <input id="orderPhone" type="tel" placeholder="مثال: 7701234567" />
+            </div>
+
+            <div class="field">
+              <label>البريد الإلكتروني</label>
+              <input id="orderEmail" type="email" placeholder="example@email.com" />
+            </div>
+
+            <div class="field">
+              <label>المحافظة</label>
+              <input id="orderGov" type="text" placeholder="مثال: بغداد" />
+            </div>
+
+            <div class="field">
+              <label>المنطقة</label>
+              <input id="orderArea" type="text" placeholder="مثال: أبو نؤاس" />
+            </div>
+
+            <div class="field full">
+              <label>أقرب نقطة دالة (اختياري)</label>
+              <input id="orderLandmark" type="text" placeholder="قرب مجمع كورنيش أبو نؤاس" />
+            </div>
+
+            <div class="field full">
+              <label>ملاحظات (اختياري)</label>
+              <textarea id="orderNotes" rows="3" placeholder="مثال: أريد معاينة القطعة..."></textarea>
+            </div>
+          </div>
+
+          <div class="formActions">
+            <button class="btn primary" type="button" id="orderWhatsApp">ارسال الطلب</button>
+            <button class="btn" type="button" id="copyOrder">نسخ تفاصيل الطلب</button>
+          </div>
+        </section>
+
+        <div class="similarWrap" id="similarProducts"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- products + i18n (اختياري) -->
+  <script src="i18n.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
