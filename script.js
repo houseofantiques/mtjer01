@@ -249,22 +249,15 @@ function formatUSD(num) {
   }
 
   function applyOrderI18n() {
-    if (els.pinDetailsToggle) els.pinDetailsToggle.textContent = t("orderDetails");
-    if (els.pinOrderToggle) els.pinOrderToggle.textContent = t("orderRequest");
+if (els.pinDetailsToggle) els.pinDetailsToggle.textContent = t("orderDetails");
 
-    if (els.orderName) els.orderName.placeholder = t("ph_name");
-    if (els.orderPhone) els.orderPhone.placeholder = "";
-    if (els.orderEmail) els.orderEmail.placeholder = "example@email.com";
-    if (els.orderGov) els.orderGov.placeholder = t("ph_gov");
-    if (els.orderArea) els.orderArea.placeholder = t("ph_area");
-    if (els.orderLandmark) els.orderLandmark.placeholder = t("ph_landmark");
-    if (els.orderNotes) els.orderNotes.placeholder = t("ph_notes");
-
-    if (els.orderWhatsApp) els.orderWhatsApp.textContent = t("sendOrder");
-    if (els.copyOrder) els.copyOrder.textContent = t("copyOrderBtn");
-
-    if (els.modalClose) els.modalClose.textContent = t("closeTxt");
-  }
+const addToCartBtn = document.getElementById("addToCartBtn");
+if (addToCartBtn) {
+  addToCartBtn.textContent =
+    getLang() === "en" ? "Add to cart" :
+    getLang() === "ku" ? "زیادکردن بۆ سەبەتە" :
+    "أضف إلى السلة";
+}  }
 
   /* =========================
      Category normalize (FIXED)
@@ -1511,12 +1504,11 @@ const dims = pickText(p, "dimensions", getLang) || safeText(p.dimension || p.siz
 
     if (els.itemDimensions) els.itemDimensions.textContent = dims;
     if (els.pinDimsWrap) els.pinDimsWrap.style.display = dims ? "block" : "none";
-    const addToCartBtn = document.getElementById("addToCartBtn");
+   const addToCartBtn = document.getElementById("addToCartBtn");
 
-
-if (addToCartBtn) {
+if (addToCartBtn && typeof addToCart === "function") {
   addToCartBtn.onclick = () => {
-    addToCart(p.id || p._code);
+    addToCart(p._code || p.id || p._key);
   };
 }
 
@@ -1536,26 +1528,26 @@ if (addToCartBtn) {
     };
 
     // Panels
+showPanel("details");
+applyOrderI18n();
 
-    showPanel("details");
-    applyOrderI18n();
+if (els.pinDetailsToggle) {
+  els.pinDetailsToggle.onclick = () => showPanel("details");
+}
 
-    els.pinDetailsToggle.onclick = () => showPanel("details");
-    els.pinOrderToggle.onclick = () => showPanel("order");
+function showPanel(which) {
+  if (els.pinDetails) {
+    els.pinDetails.style.display = "block";
+  }
 
-    function showPanel(which) {
-      if (which === "order") {
-        els.pinOrderPanel.style.display = "block";
-        els.pinDetails.style.display = "none";
-        els.pinOrderToggle.classList.add("active");
-        els.pinDetailsToggle.classList.remove("active");
-      } else {
-        els.pinDetails.style.display = "block";
-        els.pinOrderPanel.style.display = "none";
-        els.pinDetailsToggle.classList.add("active");
-        els.pinOrderToggle.classList.remove("active");
-      }
-    }
+  if (els.pinOrderPanel) {
+    els.pinOrderPanel.style.display = "none";
+  }
+
+  if (els.pinDetailsToggle) {
+    els.pinDetailsToggle.classList.add("active");
+  }
+}
 
     // Fav
     updateFavBtn(key);

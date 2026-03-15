@@ -1290,227 +1290,68 @@ body.noScroll{ overflow: hidden !important; }
 .legalFooter .dot {
   color: rgba(255,255,255,.28);
 }
-/* =================================
-   TOP BAR
-================================= */
-
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:90;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  height:52px;
-  padding:0 12px;
-
-  background:rgba(10,10,12,.92);
-  backdrop-filter:blur(10px);
-
-  border-bottom:1px solid rgba(255,255,255,.06);
+/* نقل زر السلة بجانب زر التفاصيل */
+.pinToggles{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  margin-top:14px;
 }
 
-/* logo */
-
-.logo{
-  width:32px;
-  height:32px;
-  border-radius:50%;
-  background:#111 center/cover no-repeat;
+.pinToggles .toggle,
+.pinToggles .cartInlineBtn{
+  width:100%;
+  height:48px;
+  border-radius:14px;
 }
 
-/* left + right */
-
-.topbarLeft,
-.topbarRight{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-/* =================================
-   LANGUAGE BUTTON
-================================= */
-
-.selectMini{
-  height:34px;
-  padding:0 10px;
-
-  border-radius:10px;
+.pinToggles .cartInlineBtn{
   border:1px solid rgba(255,255,255,.10);
-
-  background:rgba(255,255,255,.05);
-
-  color:#fff;
-  font-size:13px;
-  font-weight:600;
-
-  cursor:pointer;
-
-  transition:all .15s ease;
-}
-
-.selectMini:hover{
-  background:rgba(255,255,255,.09);
-}
-
-/* =================================
-   CART BUTTON
-================================= */
-
-.cartBtn{
-  position:relative;
-
-  width:34px;
-  height:34px;
-
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,.10);
-
-  background:rgba(255,255,255,.05);
-
-  color:#fff;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  cursor:pointer;
-
-  transition:all .15s ease;
-}
-
-.cartBtn:hover{
-  background:rgba(255,255,255,.10);
-}
-
-.cartBtn:active{
-  transform:scale(.92);
-}
-
-.cartBtn__icon{
-  font-size:14px;
-}
-
-/* cart count */
-
-.cartBtn__count{
-  position:absolute;
-
-  top:-5px;
-  left:-5px;
-
-  min-width:16px;
-  height:16px;
-
-  padding:0 4px;
-
-  border-radius:50%;
-
-  background:#a51420;
-  color:#fff;
-
-  font-size:10px;
-  font-weight:700;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* =================================
-   ADD TO CART BUTTON
-================================= */
-
-#addToCartBtn{
-
-  height:38px;
-  padding:0 16px;
-
-  border-radius:999px;
-
-  border:1px solid rgba(255,255,255,.08);
-
   background:linear-gradient(135deg,#a51420,#6f0f17);
-
   color:#fff;
-
-  font-size:13px;
-  font-weight:700;
-
-  cursor:pointer;
-
-  transition:all .15s ease;
-}
-
-#addToCartBtn:hover{
-  transform:translateY(-1px);
-}
-
-#addToCartBtn:active{
-  transform:scale(.94);
-}
-
-/* =================================
-   PRICE BADGE
-================================= */
-
-.pinPrice{
-
-  height:34px;
-  padding:0 12px;
-
-  border-radius:999px;
-
-  background:rgba(165,20,32,.15);
-
-  border:1px solid rgba(165,20,32,.30);
-
-  color:#fff;
-
   font-size:14px;
   font-weight:700;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* =================================
-   ACTION ICONS
-================================= */
-
-.pinIcons{
-  display:flex;
-  gap:8px;
-}
-
-.pinIcon{
-
-  width:32px;
-  height:32px;
-
-  border-radius:50%;
-
-  border:1px solid rgba(255,255,255,.10);
-
-  background:rgba(255,255,255,.04);
-
-  color:#fff;
-
-  font-size:13px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
   cursor:pointer;
-
-  transition:all .15s ease;
+  transition:transform .15s ease, opacity .15s ease, box-shadow .15s ease;
 }
 
-.pinIcon:hover{
-  background:rgba(255,255,255,.09);
+.pinToggles .cartInlineBtn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(165,20,32,.22);
+}
+
+.pinToggles .cartInlineBtn:active{
+  transform:scale(.97);
+}
+.pinToggles{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:14px;
+}
+
+.pinToggles .toggle,
+.pinToggles #addToCartBtn{
+  width:100%;
+  height:48px;
+  border-radius:14px;
+}
+
+.pinToggles #addToCartBtn{
+  border:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(135deg,#a51420,#6f0f17);
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+
+.pinToggles #addToCartBtn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(165,20,32,.22);
+}
+
+.pinToggles #addToCartBtn:active{
+  transform:scale(.97);
 }
