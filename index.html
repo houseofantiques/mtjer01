@@ -7,14 +7,11 @@
   <title>متجر بيت التحفيات</title>
 
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- intl-tel-input CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/css/intlTelInput.css">
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
   <header class="topbar" role="banner">
     <div class="topbarLeft">
       <select id="langSelect" class="selectMini" aria-label="Language">
@@ -29,7 +26,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero heroSticky" aria-label="Cover">
     <div class="heroSlider" id="heroSlider" aria-label="Cover slider">
       <div class="heroTrack" id="heroTrack">
@@ -57,7 +53,6 @@
     </div>
   </section>
 
-  <!-- FILTERS -->
   <section class="filters">
     <div class="searchRow">
       <input
@@ -73,7 +68,6 @@
     </div>
 
     <div id="featuredWrap" class="featuredWrap"></div>
-
     <div id="chipsWrap" class="chips" aria-label="Categories"></div>
 
     <div class="selectsRow">
@@ -91,13 +85,11 @@
     </div>
   </section>
 
-  <!-- GRID -->
   <main class="page">
     <div id="productsGrid" class="grid" aria-live="polite"></div>
     <div id="emptyState" class="empty" style="display:none;">لا توجد نتائج</div>
   </main>
 
-  <!-- MODAL -->
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modalDialog" role="dialog" aria-modal="true" aria-label="Product details">
       <button class="modalClose" id="modalClose" type="button" data-i18n="close">إغلاق</button>
@@ -196,23 +188,28 @@
     </div>
   </div>
 
-  <!-- SCRIPTS (ORDER MATTERS) -->
-<script src="products.js" defer></script>
-<script src="products-extra.js" defer></script>
-<script src="i18n.js" defer></script>
-<script src="script.js" defer></script>
+  <footer class="legalFooter" aria-label="Legal footer">
+    <div class="legalFooter__inner">
+      <span class="legalFooter__copy">© House of Antiques</span>
 
-  <!-- i18n (ملفج الجاهز) -->
-  <script src="i18n.js" defer></script>
+      <nav class="legalFooter__links" aria-label="Policies">
+        <a href="./terms.html">الشروط والأحكام</a>
+        <span class="dot">•</span>
+        <a href="./privacy.html">سياسة الخصوصية</a>
+        <span class="dot">•</span>
+        <a href="./returns.html">الاستبدال والاسترجاع</a>
+        <span class="dot">•</span>
+        <a href="./shipping.html">الشحن</a>
+      </nav>
+    </div>
+  </footer>
 
-  <!-- EmailJS -->
+  <script type="module" src="./index.js"></script>
+  <script src="./i18n.js" defer></script>
+  <script src="./script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-
-  <!-- intl-tel-input -->
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js" defer></script>
 
-  <!-- Main -->
- 
 </body>
 </html>

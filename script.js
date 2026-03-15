@@ -37,15 +37,15 @@
       .replace(/\s+/g, " ");
   }
 
-  function formatIQD(num) {
-    const n = Number(num);
-    if (!Number.isFinite(n) || n <= 0) return "—";
-    try {
-      return `${n.toLocaleString("en-US")} د.ع`;
-    } catch {
-      return `${String(n)} د.ع`;
-    }
+function formatUSD(num) {
+  const n = Number(num);
+  if (!Number.isFinite(n) || n <= 0) return "";
+  try {
+    return `$${n.toLocaleString("en-US")}`;
+  } catch {
+    return `$${String(n)}`;
   }
+}
 
   function pickText(obj, field, getLang) {
     const lang = getLang();
@@ -392,8 +392,7 @@
       const catText = pickText(p, "category", getLang) || safeText(p.category || p.cat || "");
       const catKey = normalizeCategoryKey(catText);
 
-      const priceText = safeText(p.price) || formatIQD(p.priceNumber);
-
+      const priceText = formatUSD(p.priceNumber);
       const images = getImages(p);
       const cover = images[0] || "";
 

@@ -824,3 +824,265 @@ body.noScroll{ overflow: hidden !important; }
   opacity:.7;
   font-size:12px;
 }
+/* =========================
+   Legal Footer (minimal)
+========================= */
+.legalFooter{
+  padding: 14px 16px;
+  margin: 18px 0 10px;
+  opacity: .85;
+}
+.legalFooter__inner{
+  max-width: 1180px;
+  margin: 0 auto;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 12px;
+}
+.legalFooter__copy{
+  font-size: 12px;
+  color: rgba(255,255,255,.62);
+  letter-spacing:.2px;
+}
+.legalFooter__links{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.legalFooter__links a{
+  font-size: 12px;
+  color: rgba(255,255,255,.72);
+  text-decoration:none;
+  transition: opacity .2s ease;
+}
+.legalFooter__links a:hover{ opacity: .9; text-decoration: underline; }
+.legalFooter__links .dot{
+  color: rgba(255,255,255,.25);
+  font-size: 12px;
+}
+
+@media (max-width: 680px){
+  .legalFooter__inner{ flex-direction:column; align-items:flex-start; }
+  .legalFooter__links{ justify-content:flex-start; }
+}
+/* =========================
+   Policy Pages (HOA)
+========================= */
+.policyPage{
+  min-height: 100vh;
+  padding: 28px 16px 60px;
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.06), transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,.88), rgba(0,0,0,.94));
+  color: rgba(255,255,255,.92);
+  font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.policyWrap{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.policyTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom: 16px;
+}
+
+.policyBrand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.policyBrand img{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.policyBrand .small{
+  font-size: 12px;
+  opacity: .7;
+  margin-top: 2px;
+}
+
+.policyTitle{
+  margin: 0;
+  font-size: 28px;
+  letter-spacing:.2px;
+}
+.policyMeta{
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: .7;
+}
+
+.policyActions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.policyBtn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(255,255,255,.9);
+  font-size: 13px;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.policyBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+}
+
+.policyCard{
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+}
+
+.policyIntro{
+  margin: 0 0 14px;
+  opacity: .84;
+  line-height: 1.9;
+}
+
+.langGrid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.langBlock{
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.langHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 10px;
+}
+.langTag{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  opacity: .9;
+}
+.langNote{
+  font-size: 12px;
+  opacity: .65;
+}
+
+.langBlock h3{
+  margin: 10px 0 6px;
+  font-size: 16px;
+}
+.langBlock p, .langBlock li{
+  margin: 0 0 10px;
+  line-height: 1.9;
+  opacity: .88;
+  font-size: 14px;
+}
+.langBlock ul{
+  margin: 0 0 10px 0;
+  padding: 0 18px 0 0;
+}
+
+.lang-en{ direction:ltr; text-align:left; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.lang-ar{ direction:rtl; text-align:right; }
+.lang-ku{ direction:rtl; text-align:right; } /* سوراني بحروف عربية */
+
+.policyDivider{
+  height:1px;
+  background: rgba(255,255,255,.10);
+  margin: 14px 0;
+}
+
+.policyFoot{
+  margin-top: 14px;
+  font-size: 12px;
+  opacity: .65;
+  line-height: 1.8;
+}
+
+@media (min-width: 860px){
+  .langGrid{ grid-template-columns: 1fr 1fr; }
+  .langBlock.lang-ku{ grid-column: 1 / -1; } /* الكردي سطر كامل */
+}
+
+@media (max-width: 560px){
+  .policyTitle{ font-size: 22px; }
+  .policyTop{ flex-direction:column; align-items:stretch; }
+  .policyActions{ justify-content:flex-start; flex-wrap:wrap; }
+}
+.cookieBarHOA{
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 99999;
+}
+.cookieBarHOA__inner{
+  max-width: 980px;
+  margin: 0 auto;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 14px;
+  border-radius: 16px;
+  background: rgba(15,15,15,.92);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 55px rgba(0,0,0,.45);
+  backdrop-filter: blur(10px);
+  .cookieBarHOA__inner{ direction:ltr; text-align:left; }
+}
+.cookieBarHOA__text{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  font-size: 13px;
+  opacity:.88;
+}
+.cookieBarHOA__text strong{ opacity: .95; }
+.cookieBarHOA__text a{
+  color: rgba(255,255,255,.85);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cookieBarHOA__actions{ display:flex; gap:10px; }
+.cookieBarHOA__actions button{
+  border: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+.cookieOk{ background: #b89b5e; color:#0b0b0b; }
+.cookieNo{ background: rgba(255,255,255,.06); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.14); }
+
+@media (max-width: 620px){
+  .cookieBarHOA__inner{ flex-direction:column; align-items:flex-start; }
+}
