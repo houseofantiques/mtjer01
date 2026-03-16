@@ -602,7 +602,10 @@ function renderGrid() {
   if (els.resultsCount) els.resultsCount.textContent = `${list.length} ${t("results")}`;
 
   if (!list.length) {
-    if (els.productsGrid) els.productsGrid.innerHTML = "";
+    if (els.productsGrid) {
+      els.productsGrid.innerHTML = "";
+      els.productsGrid.classList.remove("is-rows");
+    }
     if (els.emptyState) {
       els.emptyState.style.display = "block";
       els.emptyState.textContent = t("noResults");
@@ -611,12 +614,17 @@ function renderGrid() {
   }
 
   if (els.emptyState) els.emptyState.style.display = "none";
-  if (els.productsGrid) els.productsGrid.innerHTML = list.map(tileHTML).join("");
+
+  if (els.productsGrid) {
+    const useRowGrid = state.sort === "priceAsc" || state.sort === "priceDesc" || state.sort === "newest";
+    els.productsGrid.classList.toggle("is-rows", useRowGrid);
+    els.productsGrid.innerHTML = list.map(tileHTML).join("");
+  }
+  
 
   primeAspectRatios();
   initTileAutoFlip();
 }
-
 function renderAll() {
   renderChips();
   renderGrid();
@@ -1732,6 +1740,7 @@ function showPanel(which) {
   /* =========================
      Events
   ========================= */
+  
   function bindEvents() {
     if (els.langSelect) {
       const saved = localStorage.getItem(LANG_KEY);
@@ -1789,14 +1798,28 @@ function showPanel(which) {
       if (e.key === "Escape" && els.modal?.classList.contains("is-open")) closeModal(true);
     });
 
+    function ensureBaseHistoryState() {
+  const hasItem = /item=/.test(String(location.hash || ""));
+  if (!hasItem && (!history.state || !history.state.storeBase)) {
+    history.replaceState({ storeBase: true }, "", location.href);
+  }
+}
+
     window.addEventListener("popstate", () => {
-      const hasItem = /item=/.test(String(location.hash || ""));
-      if (els.modal?.classList.contains("is-open") && !hasItem) {
-        closeModal(false);
-      } else if (hasItem) {
-        tryOpenFromHash();
-      }
-    });
+
+  const hasItem = /item=/.test(String(location.hash || ""));
+
+  if (hasItem) {
+    tryOpenFromHash();
+    return;
+  }
+
+  if (els.modal?.classList.contains("is-open")) {
+    closeModal(false);
+  }
+
+});
+
 
     document.addEventListener("click", (e) => {
       const sim = e.target.closest(".similar-item");

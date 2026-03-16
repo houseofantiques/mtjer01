@@ -13,22 +13,33 @@
 <body>
 
   <header class="topbar" role="banner">
-    <div class="topbarLeft">
-      <select id="langSelect" class="selectMini" aria-label="Language">
-        <option value="ar">AR</option>
-        <option value="en">EN</option>
-        <option value="ku">KU</option>
-      </select>
+  <div class="topbarInner">
+
+    <a href="index.html" class="topbarBrand" aria-label="House of Antiques">
+      <img
+        src="logo.png"
+        alt="House of Antiques"
+        class="topbarLogo"
+      />
+    </a>
+
+    <div class="topbarActions">
+      <button id="cartToggle" class="cartBtn" type="button" aria-label="Cart">
+        <span class="cartBtn__icon">🛒</span>
+        <span id="cartCount" class="cartBtn__count">0</span>
+      </button>
+
+      <div class="langWrap">
+        <select id="langSelect" class="selectMini" aria-label="Language">
+          <option value="ar">AR</option>
+          <option value="en">EN</option>
+          <option value="ku">KU</option>
+        </select>
+      </div>
     </div>
 
-   <div class="topbarRight">
-  <button id="cartToggle" class="cartBtn" type="button" aria-label="Cart">
-    <span class="cartBtn__icon">🛒</span>
-    <span id="cartCount" class="cartBtn__count">0</span>
-  </button>
-  <div class="logo" aria-hidden="true"></div>
-</div>
-  </header>
+  </div>
+</header>
 
   <section class="hero heroSticky" aria-label="Cover">
     <div class="heroSlider" id="heroSlider" aria-label="Cover slider">
