@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | House of Antiques</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/css/intlTelInput.css" />
+
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --panel:#17181b;
+      --panel-2:#1e2024;
+      --line:rgba(255,255,255,.08);
+      --text:#f5f1e8;
+      --muted:rgba(245,241,232,.72);
+      --gold:#c6a56b;
+      --danger:#d25b5b;
+      --radius:20px;
+      --shadow:0 18px 45px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      background:
+        radial-gradient(circle at top, rgba(198,165,107,.08), transparent 30%),
+        linear-gradient(180deg, #0b0c0e 0%, #121316 100%);
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      min-height:100vh;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .checkoutPage{
+      width:min(1280px, calc(100% - 32px));
+      margin:28px auto 60px;
+    }
+
+    .checkoutTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+
+    .checkoutTop__left{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .checkoutKicker{
+      color:var(--gold);
+      font-size:13px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .checkoutTitle{
+      margin:0;
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1.05;
+    }
+
+    .checkoutSub{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+      max-width:760px;
+    }
+
+    .backBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-size:14px;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .backBtn:hover{
+      background:rgba(255,255,255,.08);
+      transform:translateY(-1px);
+    }
+
+    .checkoutLayout{
+      display:grid;
+      grid-template-columns:minmax(0, 1.15fr) minmax(340px, .85fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .cardHead{
+      padding:20px 22px;
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+    }
+
+    .cardTitle{
+      margin:0;
+      font-size:18px;
+      font-weight:700;
+    }
+
+    .cardHint{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .cardBody{
+      padding:22px;
+    }
+
+    .formGrid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .field.full{
+      grid-column:1 / -1;
+    }
+
+    .field label{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .input,
+    .select,
+    .textarea{
+      width:100%;
+      border:1px solid var(--line);
+      background:var(--panel-2);
+      color:var(--text);
+      border-radius:14px;
+      min-height:48px;
+      padding:12px 14px;
+      outline:none;
+      transition:border-color .2s ease, background .2s ease;
+    }
+
+    .textarea{
+      min-height:110px;
+      resize:vertical;
+      padding-top:14px;
+    }
+
+    .input:focus,
+    .select:focus,
+    .textarea:focus{
+      border-color:rgba(198,165,107,.65);
+      background:#23262c;
+    }
+
+    .checkRow{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .checkRow input{
+      width:18px;
+      height:18px;
+      accent-color:var(--gold);
+    }
+
+    .summaryList{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .summaryItem{
+      display:grid;
+      grid-template-columns:74px minmax(0,1fr) auto;
+      gap:14px;
+      align-items:center;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .summaryItem__img{
+      width:74px;
+      height:74px;
+      border-radius:14px;
+      object-fit:cover;
+      background:#0d0e11;
+      border:1px solid var(--line);
+    }
+
+    .summaryItem__title{
+      font-size:15px;
+      font-weight:700;
+      line-height:1.5;
+      margin-bottom:6px;
+    }
+
+    .summaryItem__meta{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .summaryItem__price{
+      text-align:left;
+      white-space:nowrap;
+      font-size:15px;
+      font-weight:700;
+    }
+
+    .summaryTotals{
+      margin-top:18px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .totalRow{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .totalRow strong{
+      color:var(--text);
+      font-size:15px;
+    }
+
+    .totalRow--grand{
+      padding-top:10px;
+      border-top:1px dashed var(--line);
+      margin-top:4px;
+      font-size:16px;
+    }
+
+    .totalRow--grand strong{
+      font-size:22px;
+      color:var(--gold);
+    }
+
+    .checkoutActions{
+      margin-top:22px;
+      display:grid;
+      gap:12px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn{
+      width:100%;
+      border:0;
+      border-radius:16px;
+      min-height:54px;
+      padding:0 18px;
+      cursor:pointer;
+      font-size:15px;
+      font-weight:700;
+      transition:transform .2s ease, opacity .2s ease, background .2s ease;
+    }
+
+    .primaryBtn{
+      background:linear-gradient(135deg, #d1af74 0%, #b78e4e 100%);
+      color:#111;
+    }
+
+    .primaryBtn:hover{
+      transform:translateY(-1px);
+    }
+
+    .secondaryBtn{
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      border:1px solid var(--line);
+    }
+
+    .secondaryBtn:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    .noteBox{
+      margin-top:14px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(198,165,107,.08);
+      border:1px solid rgba(198,165,107,.18);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.8;
+    }
+
+    .emptyState{
+      padding:22px;
+      border:1px dashed var(--line);
+      border-radius:16px;
+      background:rgba(255,255,255,.02);
+      color:var(--muted);
+      text-align:center;
+      line-height:1.9;
+    }
+
+    .errorBox{
+      display:none;
+      margin-bottom:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(210,91,91,.12);
+      border:1px solid rgba(210,91,91,.25);
+      color:#ffd4d4;
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .hidden{
+      display:none !important;
+    }
+
+    .iti{
+      width:100%;
+    }
+
+    .iti__country-list{
+      background:#1e2024;
+      color:#f5f1e8;
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .iti__selected-flag{
+      border-radius:12px;
+    }
+
+    @media (max-width: 980px){
+      .checkoutLayout{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .checkoutPage{
+        width:min(100% - 20px, 100%);
+        margin:16px auto 40px;
+      }
+
+      .cardHead,
+      .cardBody{
+        padding:16px;
+      }
+
+      .formGrid{
+        grid-template-columns:1fr;
+      }
+
+      .summaryItem{
+        grid-template-columns:60px minmax(0,1fr);
+      }
+
+      .summaryItem__price{
+        grid-column:2;
+        text-align:right;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="checkoutPage">
+    <div class="checkoutTop">
+      <div class="checkoutTop__left">
+        <div class="checkoutKicker">House of Antiques</div>
+        <h1 class="checkoutTitle" data-i18n="checkout_title">Checkout</h1>
+        <div class="checkoutSub" data-i18n="checkout_subtitle">
+          Complete your order details
+        </div>
+      </div>
+
+      <a class="backBtn" href="index.html" data-i18n="back_to_store">Back to store</a>
+    </div>
+
+    <div id="checkoutError" class="errorBox"></div>
+
+    <div class="checkoutLayout">
+      <section class="card">
+        <div class="cardHead">
+          <h2 class="cardTitle" data-i18n="customer_shipping_title">Customer & Shipping Information</h2>
+          <div class="cardHint" data-i18n="customer_shipping_hint">Enter your details</div>
+        </div>
+
+        <div class="cardBody">
+          <form id="checkoutForm" novalidate>
+            <div class="formGrid">
+              <div class="field">
+                <label for="fullName" data-i18n="full_name">Full name</label>
+                <input id="fullName" name="fullName" class="input" type="text" data-i18n-placeholder="ph_full_name" placeholder="Full name" required />
+              </div>
+
+              <div class="field">
+                <label for="email" data-i18n="email">Email</label>
+                <input id="email" name="email" class="input" type="email" data-i18n-placeholder="ph_email" placeholder="example@email.com" required />
+              </div>
+
+              <div class="field">
+                <label for="phone" data-i18n="phone">Phone number</label>
+                <input id="phone" name="phone" class="input" type="tel" placeholder="+1 555..." required />
+              </div>
+
+              <div class="field">
+                <label for="country" data-i18n="country">Country</label>
+                <input id="country" name="country" class="input" type="text" list="countryList" data-i18n-placeholder="ph_country" placeholder="Country" required />
+                <datalist id="countryList"></datalist>
+              </div>
+
+              <div class="field">
+                <label for="city" data-i18n="city">City</label>
+                <input id="city" name="city" class="input" type="text" data-i18n-placeholder="ph_city" placeholder="City" required />
+              </div>
+
+              <div class="field">
+                <label for="postalCode" data-i18n="postal_code">Postal code</label>
+                <input id="postalCode" name="postalCode" class="input" type="text" data-i18n-placeholder="ph_postal_code" placeholder="Postal code" />
+              </div>
+
+              <div class="field full">
+                <label for="address" data-i18n="full_address">Full address</label>
+                <textarea id="address" name="address" class="textarea" data-i18n-placeholder="ph_address" placeholder="Street, building, district..." required></textarea>
+              </div>
+
+              <div class="field">
+                <label for="shippingMethod" data-i18n="shipping_method">Shipping method</label>
+                <select id="shippingMethod" name="shippingMethod" class="select" required>
+                  <option value="standard" data-i18n="shipping_standard">Standard Shipping</option>
+                  <option value="express" data-i18n="shipping_express">Express Shipping</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="billingSame" data-i18n="billing_address">Billing address</label>
+                <div class="checkRow">
+                  <input id="billingSame" name="billingSame" type="checkbox" checked />
+                  <label for="billingSame" data-i18n="same_as_shipping">Same as shipping address</label>
+                </div>
+              </div>
+
+              <div class="field full">
+                <label for="orderNotes" data-i18n="order_notes">Order notes</label>
+                <textarea id="orderNotes" name="orderNotes" class="textarea" data-i18n-placeholder="ph_order_notes" placeholder="Notes"></textarea>
+              </div>
+
+              <div id="billingWrap" class="field full hidden">
+                <label for="billingAddress" data-i18n="billing_address">Billing address</label>
+                <textarea id="billingAddress" name="billingAddress" class="textarea" data-i18n-placeholder="ph_billing_address" placeholder="Billing address"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="cardHead">
+          <h2 class="cardTitle" data-i18n="order_summary">Order Summary</h2>
+          <div class="cardHint" data-i18n="order_summary_hint">Review your items</div>
+        </div>
+
+        <div class="cardBody">
+          <div id="checkoutItems" class="summaryList"></div>
+
+          <div id="checkoutEmpty" class="emptyState hidden" data-i18n="cart_empty_checkout">
+            Your cart is empty
+          </div>
+
+          <div id="totalsWrap" class="summaryTotals">
+            <div class="totalRow">
+              <span data-i18n="subtotal">Subtotal</span>
+              <strong id="subtotalValue">$0</strong>
+            </div>
+
+            <div class="totalRow">
+              <span data-i18n="shipping">Shipping</span>
+              <strong id="shippingValue">$0</strong>
+            </div>
+
+            <div class="totalRow totalRow--grand">
+              <span data-i18n="grand_total">Grand total</span>
+              <strong id="grandTotalValue">$0</strong>
+            </div>
+          </div>
+
+          <div class="checkoutActions">
+            <button id="continueBtn" class="primaryBtn" type="button" data-i18n="continue_to_review">
+              Continue to review
+            </button>
+
+            <button id="returnBtn" class="secondaryBtn" type="button" data-i18n="back_to_cart">
+              Back to cart
+            </button>
+          </div>
+
+          <div class="noteBox" data-i18n="checkout_note">
+            Order data will be saved before moving to the next step
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script type="module" src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js"></script>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const CART_KEY = "hoa_cart_v1";
+      const CHECKOUT_KEY = "hoa_checkout_v1";
+      const LANG_KEY = "hoa_lang_v7";
+
+      const SHIPPING_PRICES = {
+        standard: 35,
+        express: 75
+      };
+
+      const COUNTRY_OPTIONS = [
+        "Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan",
+        "Bahrain","Bangladesh","Belgium","Bolivia","Bosnia and Herzegovina","Brazil","Bulgaria",
+        "Cambodia","Canada","Chile","China","Colombia","Croatia","Cyprus","Czech Republic",
+        "Denmark","Egypt","Estonia","Finland","France","Georgia","Germany","Greece",
+        "Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Italy",
+        "Japan","Jordan","Kazakhstan","Kuwait","Latvia","Lebanon","Lithuania","Luxembourg",
+        "Malaysia","Mexico","Morocco","Netherlands","New Zealand","Norway",
+        "Oman","Pakistan","Palestine","Philippines","Poland","Portugal","Qatar",
+        "Romania","Russia","Saudi Arabia","Serbia","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sweden","Switzerland","Syria",
+        "Thailand","Tunisia","Turkey","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan",
+        "Vietnam","Yemen"
+      ];
+
+      const I18N = {
+        ar: {
+          checkout_title: "إتمام الطلب",
+          checkout_subtitle: "أكمل بيانات الطلب",
+          back_to_store: "العودة إلى المتجر",
+          customer_shipping_title: "معلومات العميل والشحن",
+          customer_shipping_hint: "أدخل بيانات العميل وعنوان الشحن",
+          full_name: "الاسم الكامل",
+          email: "البريد الإلكتروني",
+          phone: "رقم الهاتف",
+          country: "الدولة",
+          city: "المدينة",
+          postal_code: "الرمز البريدي",
+          full_address: "العنوان الكامل",
+          shipping_method: "طريقة الشحن",
+          shipping_standard: "شحن عادي",
+          shipping_express: "شحن سريع",
+          billing_address: "عنوان الفاتورة",
+          same_as_shipping: "نفس عنوان الشحن",
+          order_notes: "ملاحظات الطلب",
+          order_summary: "ملخص الطلب",
+          order_summary_hint: "مراجعة عناصر الطلب",
+          cart_empty_checkout: "السلة فارغة",
+          subtotal: "المجموع الفرعي",
+          shipping: "الشحن",
+          grand_total: "الإجمالي النهائي",
+          continue_to_review: "تأكيد البيانات والانتقال للمراجعة",
+          back_to_cart: "الرجوع إلى السلة",
+          checkout_note: "يتم حفظ بيانات الطلب قبل الانتقال للخطوة التالية",
+          ph_full_name: "الاسم الكامل",
+          ph_email: "example@email.com",
+          ph_country: "الدولة",
+          ph_city: "المدينة",
+          ph_postal_code: "الرمز البريدي",
+          ph_address: "الشارع، البناية، المنطقة...",
+          ph_order_notes: "ملاحظات الطلب",
+          ph_billing_address: "عنوان الفاتورة",
+          err_required: "أكمل الحقول المطلوبة",
+          err_email: "البريد الإلكتروني غير صحيح",
+          err_billing: "أدخل عنوان الفاتورة",
+          err_empty_cart: "السلة فارغة",
+          code_label: "الكود",
+          price_label: "السعر",
+          qty_label: "الكمية"
+        },
+        en: {
+          checkout_title: "Checkout",
+          checkout_subtitle: "Complete your order details",
+          back_to_store: "Back to store",
+          customer_shipping_title: "Customer & Shipping Information",
+          customer_shipping_hint: "Enter customer and shipping details",
+          full_name: "Full name",
+          email: "Email",
+          phone: "Phone number",
+          country: "Country",
+          city: "City",
+          postal_code: "Postal code",
+          full_address: "Full address",
+          shipping_method: "Shipping method",
+          shipping_standard: "Standard Shipping",
+          shipping_express: "Express Shipping",
+          billing_address: "Billing address",
+          same_as_shipping: "Same as shipping address",
+          order_notes: "Order notes",
+          order_summary: "Order Summary",
+          order_summary_hint: "Review your order items",
+          cart_empty_checkout: "Your cart is empty",
+          subtotal: "Subtotal",
+          shipping: "Shipping",
+          grand_total: "Grand total",
+          continue_to_review: "Confirm details and continue to review",
+          back_to_cart: "Back to cart",
+          checkout_note: "Order data will be saved before moving to the next step",
+          ph_full_name: "Full name",
+          ph_email: "example@email.com",
+          ph_country: "Country",
+          ph_city: "City",
+          ph_postal_code: "Postal code",
+          ph_address: "Street, building, district...",
+          ph_order_notes: "Order notes",
+          ph_billing_address: "Billing address",
+          err_required: "Please complete the required fields",
+          err_email: "Invalid email address",
+          err_billing: "Enter billing address",
+          err_empty_cart: "Your cart is empty",
+          code_label: "Code",
+          price_label: "Price",
+          qty_label: "Quantity"
+        },
+        ku: {
+          checkout_title: "تەواوکردنی داوا",
+          checkout_subtitle: "زانیارییەکانی داواکەت تەواو بکە",
+          back_to_store: "گەڕانەوە بۆ فرۆشگا",
+          customer_shipping_title: "زانیاری کڕیار و گەیاندن",
+          customer_shipping_hint: "زانیاری کڕیار و ناونیشانی گەیاندن بنووسە",
+          full_name: "ناوی تەواو",
+          email: "ئیمەیڵ",
+          phone: "ژمارەی تەلەفۆن",
+          country: "وڵات",
+          city: "شار",
+          postal_code: "کۆدی پۆستە",
+          full_address: "ناونیشانی تەواو",
+          shipping_method: "شێوازی گەیاندن",
+          shipping_standard: "گەیاندنی ئاسایی",
+          shipping_express: "گەیاندنی خێرا",
+          billing_address: "ناونیشانی پسوڵە",
+          same_as_shipping: "هەمان ناونیشانی گەیاندن",
+          order_notes: "تێبینییەکانی داوا",
+          order_summary: "پوختەی داوا",
+          order_summary_hint: "کاڵاکانی داواکەت پشکنە",
+          cart_empty_checkout: "سەبەتەکە بەتاڵە",
+          subtotal: "کۆی لاوەکی",
+          shipping: "گەیاندن",
+          grand_total: "کۆی گشتی",
+          continue_to_review: "پشتڕاستکردنەوەی زانیاری و چوون بۆ پێداچوونەوە",
+          back_to_cart: "گەڕانەوە بۆ سەبەتە",
+          checkout_note: "زانیارییەکانی داوا پاشەکەوت دەکرێن پێش چوون بۆ هەنگاوی داهاتوو",
+          ph_full_name: "ناوی تەواو",
+          ph_email: "example@email.com",
+          ph_country: "وڵات",
+          ph_city: "شار",
+          ph_postal_code: "کۆدی پۆستە",
+          ph_address: "شەقام، بینا، ناوچە...",
+          ph_order_notes: "تێبینییەکانی داوا",
+          ph_billing_address: "ناونیشانی پسوڵە",
+          err_required: "خانە پێویستەکان پڕ بکەوە",
+          err_email: "ئیمەیڵ دروست نییە",
+          err_billing: "ناونیشانی پسوڵە بنووسە",
+          err_empty_cart: "سەبەتەکە بەتاڵە",
+          code_label: "کۆد",
+          price_label: "نرخ",
+          qty_label: "دانە"
+        }
+      };
+
+      let iti = null;
+
+      const $ = (id) => document.getElementById(id);
+
+      function safeText(v) {
+        return v == null ? "" : String(v);
+      }
+
+      function getLang() {
+        return localStorage.getItem(LANG_KEY) || "ar";
+      }
+
+      function t(key) {
+        const lang = getLang();
+        return (I18N[lang] && I18N[lang][key]) || I18N.ar[key] || key;
+      }
+
+      function applyLangToDOM() {
+        const lang = getLang();
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (key) el.textContent = t(key);
+        });
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          const key = el.getAttribute("data-i18n-placeholder");
+          if (key) el.setAttribute("placeholder", t(key));
+        });
+
+        document.title = t("checkout_title") + " | House of Antiques";
+      }
+
+      function formatUSD(num) {
+        const n = Number(num || 0);
+        return "$" + n.toLocaleString("en-US");
+      }
+
+      function getCart() {
+        try {
+          const raw = localStorage.getItem(CART_KEY);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed : [];
+        } catch {
+          return [];
+        }
+      }
+
+      function getSavedCheckout() {
+        try {
+          const raw = localStorage.getItem(CHECKOUT_KEY);
+          return raw ? JSON.parse(raw) : {};
+        } catch {
+          return {};
+        }
+      }
+
+      function saveCheckout(data) {
+        localStorage.setItem(CHECKOUT_KEY, JSON.stringify(data));
+      }
+
+      function getProducts() {
+        if (Array.isArray(window.PRODUCTS)) return window.PRODUCTS;
+        if (Array.isArray(window.HOA_PRODUCTS)) return window.HOA_PRODUCTS;
+        if (Array.isArray(window.products)) return window.products;
+        return [];
+      }
+
+      function pickText(obj, field) {
+        const lang = getLang();
+        const v = obj && obj[field];
+
+        if (v && typeof v === "object" && !Array.isArray(v)) {
+          return safeText(v[lang] || v.ar || v.en || v.ku || "");
+        }
+
+        return safeText(v);
+      }
+
+      function findProductById(id) {
+        const products = getProducts();
+        return products.find((p) => String(p.id) === String(id)) || null;
+      }
+
+      function getProductPriceNumber(product) {
+        const n = Number((product && product.priceNumber) || 0);
+        return Number.isFinite(n) ? n : 0;
+      }
+
+      function getCartDetailedItems() {
+        const cart = getCart();
+
+        return cart.map((item) => {
+          const product = findProductById(item.id);
+          if (!product) return null;
+
+          const qty = Number(item.qty || 1);
+          const lineTotal = getProductPriceNumber(product) * qty;
+
+          return {
+            id: String(item.id),
+            qty,
+            product,
+            lineTotal
+          };
+        }).filter(Boolean);
+      }
+
+      function getShippingCost() {
+        const method = $("shippingMethod")?.value || "standard";
+        return SHIPPING_PRICES[method] || 0;
+      }
+
+      function updateTotals(items) {
+        const subtotal = items.reduce((sum, item) => sum + item.lineTotal, 0);
+        const shipping = items.length ? getShippingCost() : 0;
+        const grandTotal = subtotal + shipping;
+
+        $("subtotalValue").textContent = formatUSD(subtotal);
+        $("shippingValue").textContent = formatUSD(shipping);
+        $("grandTotalValue").textContent = formatUSD(grandTotal);
+      }
+
+      function renderItems() {
+        const itemsWrap = $("checkoutItems");
+        const emptyWrap = $("checkoutEmpty");
+        const totalsWrap = $("totalsWrap");
+        const items = getCartDetailedItems();
+
+        if (!items.length) {
+          itemsWrap.innerHTML = "";
+          emptyWrap.classList.remove("hidden");
+          totalsWrap.classList.add("hidden");
+          $("continueBtn").disabled = true;
+          $("continueBtn").style.opacity = ".55";
+          return;
+        }
+
+        emptyWrap.classList.add("hidden");
+        totalsWrap.classList.remove("hidden");
+        $("continueBtn").disabled = false;
+        $("continueBtn").style.opacity = "1";
+
+        itemsWrap.innerHTML = items.map((item) => {
+          const p = item.product;
+          const img = p.image || (Array.isArray(p.images) ? p.images[0] : "") || "";
+          const title = pickText(p, "name") || safeText(p.title) || "Product";
+          const code = safeText(p.code || p.id || "—");
+          const price = formatUSD(getProductPriceNumber(p));
+          const qty = item.qty;
+
+          return `
+            <div class="summaryItem">
+              <img class="summaryItem__img" src="${img}" alt="${title}">
+              <div>
+                <div class="summaryItem__title">${title}</div>
+                <div class="summaryItem__meta">
+                  ${t("code_label")}: ${code}<br>
+                  ${t("price_label")}: ${price}<br>
+                  ${t("qty_label")}: ${qty}
+                </div>
+              </div>
+              <div class="summaryItem__price">${formatUSD(item.lineTotal)}</div>
+            </div>
+          `;
+        }).join("");
+
+        updateTotals(items);
+      }
+
+      function fillSavedData() {
+        const data = getSavedCheckout();
+
+        $("fullName").value = safeText(data.fullName);
+        $("email").value = safeText(data.email);
+        $("country").value = safeText(data.country);
+        $("city").value = safeText(data.city);
+        $("postalCode").value = safeText(data.postalCode);
+        $("address").value = safeText(data.address);
+        $("shippingMethod").value = safeText(data.shippingMethod || "standard");
+        $("orderNotes").value = safeText(data.orderNotes);
+
+        const billingSame = data.billingSame !== false;
+        $("billingSame").checked = billingSame;
+        $("billingAddress").value = safeText(data.billingAddress);
+
+        if (iti && data.phone) {
+          iti.setNumber(data.phone);
+        } else {
+          $("phone").value = safeText(data.phone);
+        }
+
+        toggleBillingAddress();
+      }
+
+      function toggleBillingAddress() {
+        const same = $("billingSame").checked;
+        $("billingWrap").classList.toggle("hidden", same);
+      }
+
+      function showError(msg) {
+        const box = $("checkoutError");
+        box.style.display = "block";
+        box.textContent = msg;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function clearError() {
+        const box = $("checkoutError");
+        box.style.display = "none";
+        box.textContent = "";
+      }
+
+      function validateForm() {
+        const required = [
+          $("fullName"),
+          $("email"),
+          $("phone"),
+          $("country"),
+          $("city"),
+          $("address")
+        ];
+
+        for (const el of required) {
+          if (!el.value.trim()) {
+            showError(t("err_required"));
+            el.focus();
+            return false;
+          }
+        }
+
+        const email = $("email").value.trim();
+        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email);
+        if (!emailOk) {
+          showError(t("err_email"));
+          $("email").focus();
+          return false;
+        }
+
+        if (!$("billingSame").checked && !$("billingAddress").value.trim()) {
+          showError(t("err_billing"));
+          $("billingAddress").focus();
+          return false;
+        }
+
+        return true;
+      }
+
+      function getPhoneValue() {
+        if (iti) {
+          return iti.getNumber() || $("phone").value.trim();
+        }
+        return $("phone").value.trim();
+      }
+
+      function collectCheckoutData() {
+        const items = getCartDetailedItems();
+        const subtotal = items.reduce((sum, item) => sum + item.lineTotal, 0);
+        const shipping = items.length ? getShippingCost() : 0;
+        const total = subtotal + shipping;
+
+        return {
+          fullName: $("fullName").value.trim(),
+          email: $("email").value.trim(),
+          phone: getPhoneValue(),
+          country: $("country").value.trim(),
+          city: $("city").value.trim(),
+          address: $("address").value.trim(),
+          postalCode: $("postalCode").value.trim(),
+          shippingMethod: $("shippingMethod").value,
+          orderNotes: $("orderNotes").value.trim(),
+          billingSame: $("billingSame").checked,
+          billingAddress: $("billingSame").checked
+            ? $("address").value.trim()
+            : $("billingAddress").value.trim(),
+          cartItems: items.map((item) => ({
+            id: String(item.id),
+            qty: item.qty
+          })),
+          totals: {
+            subtotal,
+            shipping,
+            total,
+            currency: "USD"
+          }
+        };
+      }
+
+      function handleContinue() {
+        clearError();
+
+        const items = getCartDetailedItems();
+        if (!items.length) {
+          showError(t("err_empty_cart"));
+          return;
+        }
+
+        if (!validateForm()) return;
+
+        const data = collectCheckoutData();
+        saveCheckout(data);
+        window.location.href = "review.html";
+      }
+
+      function waitForProductsAndRender(retries = 40) {
+        const products = getProducts();
+
+        if (products.length) {
+          renderItems();
+          return;
+        }
+
+        if (retries <= 0) {
+          renderItems();
+          return;
+        }
+
+        setTimeout(() => waitForProductsAndRender(retries - 1), 150);
+      }
+
+      function initCountryDatalist() {
+        const list = $("countryList");
+        list.innerHTML = COUNTRY_OPTIONS.map(country => `<option value="${country}"></option>`).join("");
+      }
+
+      function initPhoneInput() {
+        const input = $("phone");
+        if (!input || !window.intlTelInput) return;
+
+        iti = window.intlTelInput(input, {
+          initialCountry: "auto",
+          preferredCountries: ["iq", "ae", "sa", "tr", "gb", "us"],
+          separateDialCode: true,
+          nationalMode: false,
+          autoPlaceholder: "aggressive",
+          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js",
+          geoIpLookup: function(callback) {
+            callback("iq");
+          }
+        });
+      }
+
+      function init() {
+        applyLangToDOM();
+        initCountryDatalist();
+        initPhoneInput();
+        fillSavedData();
+        waitForProductsAndRender();
+
+        $("billingSame").addEventListener("change", toggleBillingAddress);
+        $("shippingMethod").addEventListener("change", renderItems);
+        $("continueBtn").addEventListener("click", handleContinue);
+        $("returnBtn").addEventListener("click", () => {
+          window.location.href = "index.html";
+        });
+
+        window.addEventListener("storage", (e) => {
+          if (e.key === LANG_KEY) {
+            applyLangToDOM();
+            renderItems();
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", init);
+    })();
+  </script>
+</body>
+</html>

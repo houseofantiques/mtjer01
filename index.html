@@ -202,23 +202,28 @@
 
   <div class="cartDrawer__panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
     <div class="cartDrawer__head">
-      <h3 class="cartDrawer__title">السلة</h3>
-      <button id="cartClose" class="cartDrawer__close" type="button">×</button>
-    </div>
+     <h3 class="cartDrawer__title" id="cartTitle" data-i18n="cart_title">السلة</h3>
+<button id="cartClose" class="cartDrawer__close" type="button">×</button>
+</div>
 
-    <div id="cartItems" class="cartDrawer__items">
-      <div class="cartDrawer__empty">السلة فارغة</div>
-    </div>
+<div id="cartItems" class="cartDrawer__items">
+  <div class="cartDrawer__empty" id="cartEmptyText" data-i18n="cart_empty">السلة فارغة</div>
+</div>
 
-    <div class="cartDrawer__foot">
-      <div class="cartDrawer__totalRow">
-        <span>المجموع</span>
-        <strong id="cartTotal">$0</strong>
-      </div>
+<div class="cartDrawer__foot">
+  <div class="cartDrawer__totalRow">
+    <span id="cartTotalLabel" data-i18n="cart_total">المجموع</span>
+    <strong id="cartTotal">$0</strong>
+  </div>
 
-      <div class="cartDrawer__actions">
-        <button id="cartCheckoutBtn" class="btn primary" type="button">إتمام الطلب</button>
-        <button id="cartClearBtn" class="btn" type="button">تفريغ السلة</button>
+  <div class="cartDrawer__actions">
+    <button id="cartCheckoutBtn" class="btn primary" type="button" data-i18n="cart_checkout">
+      إتمام الطلب
+    </button>
+    <button id="cartClearBtn" class="btn" type="button" data-i18n="cart_clear">
+      تفريغ السلة
+    </button>
+  </div>
       </div>
     </div>
   </div>

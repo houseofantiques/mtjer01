@@ -1237,9 +1237,9 @@ export const FURNITURE_PRODUCTS = [
       en: "Approximate width: 3.5 meters",
       ku: "پانی نزیکەیی: 3.5 مەتر"
     },
-    priceNumber: 3077,
+    priceNumber: 10000,
     currency: "USD",
-    price: "$3,077",
+    price: "$10,000",
     status: "available",
     keywords: {
       ar: "مكتبة خشبية, مكتبة أرضية, خشب محفور, أثاث تراثي, خزانة كتب, قطعة فاخرة",

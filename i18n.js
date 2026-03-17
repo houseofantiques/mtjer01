@@ -128,9 +128,18 @@
       alert_missing_landmark: "أقرب نقطة دالة مطلوبة.",
       sending: "جارٍ إرسال الطلب...",
       email_sent: "تم إرسال الطلب إلى البريد بنجاح ✅",
-      email_failed: "تعذر إرسال الإيميل، سيتم المتابعة عبر واتساب."
+      email_failed: "تعذر إرسال الإيميل، سيتم المتابعة عبر واتساب.",
+       cart_title: "السلة",
+    cart_empty: "السلة فارغة",
+    cart_total: "المجموع",
+    cart_checkout: "إتمام الطلب",
+    cart_clear: "تفريغ السلة",
+    cart_remove: "حذف",
+    product: "منتج",
 
     },
+
+   
 
     en: {
       page_title: "House of Antiques | Store",
@@ -238,10 +247,25 @@
       alert_missing_landmark: "Nearest landmark is required.",
       sending: "Sending your order...",
       email_sent: "Order email sent successfully ✅",
-      email_failed: "Couldn’t send email. We’ll continue via WhatsApp."
+      email_failed: "Couldn’t send email. We’ll continue via WhatsApp.",
+      
+      cart_title: "Cart",
+      cart_empty: "Your cart is empty",
+      cart_total: "Total",
+      cart_checkout: "Checkout",
+      cart_clear: "Clear cart",
+      cart_remove: "Remove",
+      product: "Product",
 
     },
 
+      cart_title: "Cart",
+      cart_empty: "Your cart is empty",
+      cart_total: "Total",
+      cart_checkout: "Checkout",
+      cart_clear: "Clear cart",
+      cart_remove: "Remove",
+      product: "Product",
     ku: {
       // Kurdish (Sorani) – basic UI (RTL)
       page_title: "خانەی کۆنەکان | فرۆشگا",
@@ -339,6 +363,14 @@
       auction_title: "شتەکانی مزاد",
       back_to_store: "گەڕانەوە بۆ فرۆشگا",
       auction_hint: "ئەم لیستە تەنها شتەکانی مزادە.",
+      
+      cart_title: "سەبەتە",
+      cart_empty: "سەبەتەکەت بەتاڵە",
+      cart_total: "کۆی گشتی",
+      cart_checkout: "تەواوکردنی داوا",
+      cart_clear: "بەتاڵکردنی سەبەتە",
+      cart_remove: "سڕینەوە",
+      product: "بەرهەم",
 
             // Validation / Alerts
       alert_missing_fields: "تکایە خانە پێویستەکان پڕ بکە.",

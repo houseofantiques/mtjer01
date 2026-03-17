@@ -80,6 +80,11 @@ function formatUSD(num) {
     els.showSelect = $("showSelect");
     els.productsGrid = $("productsGrid");
     els.emptyState = $("emptyState");
+   els.cartTitle = $("cartTitle");
+els.cartEmptyText = $("cartEmptyText");
+els.cartTotalLabel = $("cartTotalLabel");
+els.cartCheckoutBtn = $("cartCheckoutBtn");
+els.cartClearBtn = $("cartClearBtn");
 
     // modal
     els.modal = $("modal");
@@ -240,25 +245,39 @@ function formatUSD(num) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
   }
-  function setLang(lang) {
-    localStorage.setItem(LANG_KEY, lang);
-    applyLangToDOM(lang);
-    renderAll();
-    applyOrderI18n();
-    if (state.openKey) openModal(state.openKey, true);
+function setLang(lang) {
+  localStorage.setItem(LANG_KEY, lang);
+  applyLangToDOM(lang);
+  renderAll();
+  applyOrderI18n();
+  applyCartI18n();
+  if (typeof renderCart === "function") renderCart();
+  if (state.openKey) openModal(state.openKey, true);
+}
+
+function applyOrderI18n() {
+  if (els.pinDetailsToggle) {
+    els.pinDetailsToggle.textContent = t("orderDetails");
   }
 
-  function applyOrderI18n() {
-if (els.pinDetailsToggle) els.pinDetailsToggle.textContent = t("orderDetails");
+  const addToCartBtn = document.getElementById("addToCartBtn");
+  if (addToCartBtn) {
+    addToCartBtn.textContent =
+      getLang() === "en"
+        ? "Add to cart"
+        : getLang() === "ku"
+        ? "زیادکردن بۆ سەبەتە"
+        : "أضف إلى السلة";
+  }
+}
 
-const addToCartBtn = document.getElementById("addToCartBtn");
-if (addToCartBtn) {
-  addToCartBtn.textContent =
-    getLang() === "en" ? "Add to cart" :
-    getLang() === "ku" ? "زیادکردن بۆ سەبەتە" :
-    "أضف إلى السلة";
-}  }
-
+function applyCartI18n() {
+  if (els.cartTitle) els.cartTitle.textContent = t("cart_title");
+  if (els.cartEmptyText) els.cartEmptyText.textContent = t("cart_empty");
+  if (els.cartTotalLabel) els.cartTotalLabel.textContent = t("cart_total");
+  if (els.cartCheckoutBtn) els.cartCheckoutBtn.textContent = t("cart_checkout");
+  if (els.cartClearBtn) els.cartClearBtn.textContent = t("cart_clear");
+}
   /* =========================
      Category normalize (FIXED)
   ========================= */
@@ -1516,8 +1535,7 @@ const dims = pickText(p, "dimensions", getLang) || safeText(p.dimension || p.siz
 
 if (addToCartBtn && typeof addToCart === "function") {
   addToCartBtn.onclick = () => {
-    addToCart(p._code || p.id || p._key);
-  };
+addToCart(p.id);  };
 }
 
     // Media (fix #1 + #2)
@@ -1782,7 +1800,6 @@ function showPanel(which) {
       if (e.target.closest(".favDot")) {
         toggleFav(key);
         window.HOA_SFX?.play("click");
-        toggleFav(key);
 
         return;
       }
@@ -1828,67 +1845,70 @@ function showPanel(which) {
       if (k) openModal(k);
     });
   }
+/* =========================
+   Init
+========================= */
+function init() {
+  try {
+    bindEls();
+    loadAR();
+    loadFavs();
+    hydrate();
 
-  /* =========================
-     Init
-  ========================= */
-  function init() {
-    try {
-      bindEls();
-      loadAR();
-      loadFavs();
-      hydrate();
-      initCart();
+    initPhoneInput();
+    initHeroSlider();
 
-      if (state.cat !== "all" && !CATEGORY_KEYS.includes(state.cat)) state.cat = "all";
-
-      // Safe EmailJS init
-      if (window.emailjs && EMAILJS_PUBLIC_KEY) {
-        try {
-          if (typeof window.emailjs.init === "function") {
-            try {
-              window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-            } catch {
-              window.emailjs.init(EMAILJS_PUBLIC_KEY);
-              
-            }
-          }
-        } catch (e) {
-          console.warn("EmailJS init failed:", e);
-        }
-      }
-
-      initPhoneInput();
-      initHeroSlider();
-      
-      
-      bindEvents();
-      renderAll();
-      tryOpenFromHash();
-    } catch (err) {
-      console.error("HOA script error:", err);
-      try {
-        if (els.emptyState) {
-          els.emptyState.style.display = "block";
-          els.emptyState.textContent = "JS Error — افتحي Console";
-        }
-      } catch {}
+    if (state.cat !== "all" && !CATEGORY_KEYS.includes(state.cat)) {
+      state.cat = "all";
     }
+
+    initCart();
+    bindEvents();
+    renderAll();
+    tryOpenFromHash();
+
+    // Safe EmailJS init
+    if (window.emailjs && EMAILJS_PUBLIC_KEY) {
+      try {
+        if (typeof window.emailjs.init === "function") {
+          try {
+            window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+          } catch {
+            window.emailjs.init(EMAILJS_PUBLIC_KEY);
+          }
+        }
+      } catch (e) {
+        console.warn("EmailJS init failed:", e);
+      }
+    }
+  } catch (err) {
+    console.error("HOA script error:", err);
+
+    try {
+      if (els.emptyState) {
+        els.emptyState.style.display = "block";
+        els.emptyState.textContent = "JS Error — افتحي Console";
+      }
+    } catch {}
   }
+}
+
 document.addEventListener("DOMContentLoaded", init);
 
 /* Fix product images sizing without needing refresh */
 window.addEventListener("load", () => {
-  document.querySelectorAll(".product-card img, .card img, .product img").forEach((img) => {
-    if (img.complete) return;
+  document
+    .querySelectorAll(".product-card img, .card img, .product img")
+    .forEach((img) => {
+      if (img.complete) return;
 
-    img.addEventListener("load", () => {
-      img.style.transform = "translateZ(0)";
-      requestAnimationFrame(() => {
-        img.style.transform = "";
+      img.addEventListener("load", () => {
+        img.style.transform = "translateZ(0)";
+        requestAnimationFrame(() => {
+          img.style.transform = "";
+        });
       });
     });
-  });
 });
 
 /* =========================
@@ -1928,13 +1948,15 @@ function addToCart(productId) {
   const exists = cart.some((item) => String(item.id) === String(productId));
 
   if (exists) {
-    toast("هذه القطعة موجودة بالفعل في السلة");
+    if (typeof toast === "function") {
+      toast("هذه القطعة موجودة بالفعل في السلة");
+    }
     return;
   }
 
   cart.push({
     id: String(product.id),
-    qty: 1
+    qty: 1,
   });
 
   saveCart(cart);
@@ -1964,7 +1986,7 @@ function getCartDetailedItems() {
       return {
         ...item,
         product,
-        lineTotal: getProductPriceNumber(product) * (item.qty || 1)
+        lineTotal: getProductPriceNumber(product) * (item.qty || 1),
       };
     })
     .filter(Boolean);
@@ -1982,7 +2004,8 @@ function renderCart() {
   cartCountEl.textContent = String(items.length);
 
   if (!items.length) {
-    cartItemsEl.innerHTML = `<div class="cartDrawer__empty">السلة فارغة</div>`;
+    const emptyText = typeof t === "function" ? t("cart_empty") : "السلة فارغة";
+    cartItemsEl.innerHTML = `<div class="cartDrawer__empty">${emptyText}</div>`;
     cartTotalEl.textContent = "$0";
     return;
   }
@@ -1993,14 +2016,22 @@ function renderCart() {
   cartItemsEl.innerHTML = items
     .map((item) => {
       const p = item.product;
-      const img = p.image || (Array.isArray(p.images) ? p.images[0] : "") || "";
+
+      const img =
+        p.image ||
+        (Array.isArray(p.images) ? p.images[0] : "") ||
+        "";
+
       const title =
-        (p.name && (p.name.ar || p.name.en || p.name.ku)) ||
+        (typeof pickText === "function" && typeof getLang === "function"
+          ? pickText(p, "name", getLang)
+          : null) ||
         p.title ||
-        "منتج";
+        "Product";
 
       const code = p.id || "—";
       const price = `$${getProductPriceNumber(p).toLocaleString("en-US")}`;
+      const removeLabel = typeof t === "function" ? t("cart_remove") : "Remove";
 
       return `
         <div class="cartItem">
@@ -2018,7 +2049,7 @@ function renderCart() {
             class="cartItem__remove"
             type="button"
             data-remove-cart="${p.id}"
-            aria-label="Remove"
+            aria-label="${removeLabel}"
           >
             ×
           </button>
@@ -2075,7 +2106,14 @@ function initCart() {
 
   if (cartCheckoutBtn) {
     cartCheckoutBtn.addEventListener("click", () => {
-      toast("الخطوة التالية: ربط السلة بصفحة checkout");
+      const cart = getCart();
+
+      if (!cart.length) {
+        alert("السلة فارغة");
+        return;
+      }
+
+      window.location.href = "checkout.html";
     });
   }
 

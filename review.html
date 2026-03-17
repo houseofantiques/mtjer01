@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Order | House of Antiques</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --panel:#17181b;
+      --panel-2:#1e2024;
+      --line:rgba(255,255,255,.08);
+      --text:#f5f1e8;
+      --muted:rgba(245,241,232,.72);
+      --gold:#c6a56b;
+      --danger:#d25b5b;
+      --radius:20px;
+      --shadow:0 18px 45px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      background:
+        radial-gradient(circle at top, rgba(198,165,107,.08), transparent 30%),
+        linear-gradient(180deg, #0b0c0e 0%, #121316 100%);
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+      min-height:100vh;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .reviewPage{
+      width:min(1320px, calc(100% - 32px));
+      margin:28px auto 60px;
+    }
+
+    .reviewTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+
+    .reviewTop__left{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .reviewKicker{
+      color:var(--gold);
+      font-size:13px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .reviewTitle{
+      margin:0;
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1.05;
+    }
+
+    .reviewSub{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+      max-width:780px;
+    }
+
+    .backBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-size:14px;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .backBtn:hover{
+      background:rgba(255,255,255,.08);
+      transform:translateY(-1px);
+    }
+
+    .errorBox{
+      display:none;
+      margin-bottom:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(210,91,91,.12);
+      border:1px solid rgba(210,91,91,.25);
+      color:#ffd4d4;
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .reviewLayout{
+      display:grid;
+      grid-template-columns:minmax(0, 1.05fr) minmax(350px, .95fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    .stack{
+      display:grid;
+      gap:22px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .cardHead{
+      padding:20px 22px;
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+    }
+
+    .cardTitle{
+      margin:0;
+      font-size:18px;
+      font-weight:700;
+    }
+
+    .cardHint{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .cardBody{
+      padding:22px;
+    }
+
+    .infoGrid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+    }
+
+    .infoItem{
+      min-height:74px;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .infoItem.full{
+      grid-column:1 / -1;
+    }
+
+    .infoLabel{
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:8px;
+      line-height:1.6;
+    }
+
+    .infoValue{
+      font-size:15px;
+      line-height:1.8;
+      word-break:break-word;
+    }
+
+    .summaryList{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .summaryItem{
+      display:grid;
+      grid-template-columns:74px minmax(0,1fr) auto;
+      gap:14px;
+      align-items:center;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .summaryItem__img{
+      width:74px;
+      height:74px;
+      border-radius:14px;
+      object-fit:cover;
+      background:#0d0e11;
+      border:1px solid var(--line);
+    }
+
+    .summaryItem__title{
+      font-size:15px;
+      font-weight:700;
+      line-height:1.5;
+      margin-bottom:6px;
+    }
+
+    .summaryItem__meta{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .summaryItem__price{
+      text-align:left;
+      white-space:nowrap;
+      font-size:15px;
+      font-weight:700;
+    }
+
+    .summaryTotals{
+      margin-top:18px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .totalRow{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .totalRow strong{
+      color:var(--text);
+      font-size:15px;
+    }
+
+    .totalRow--grand{
+      padding-top:10px;
+      border-top:1px dashed var(--line);
+      margin-top:4px;
+      font-size:16px;
+    }
+
+    .totalRow--grand strong{
+      font-size:22px;
+      color:var(--gold);
+    }
+
+    .reviewActions{
+      margin-top:22px;
+      display:grid;
+      gap:12px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn{
+      width:100%;
+      border:0;
+      border-radius:16px;
+      min-height:54px;
+      padding:0 18px;
+      cursor:pointer;
+      font-size:15px;
+      font-weight:700;
+      transition:transform .2s ease, opacity .2s ease, background .2s ease;
+    }
+
+    .primaryBtn{
+      background:linear-gradient(135deg, #d1af74 0%, #b78e4e 100%);
+      color:#111;
+    }
+
+    .primaryBtn:hover{
+      transform:translateY(-1px);
+    }
+
+    .secondaryBtn{
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      border:1px solid var(--line);
+    }
+
+    .secondaryBtn:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    .emptyState{
+      padding:22px;
+      border:1px dashed var(--line);
+      border-radius:16px;
+      background:rgba(255,255,255,.02);
+      color:var(--muted);
+      text-align:center;
+      line-height:1.9;
+    }
+
+    .hidden{
+      display:none !important;
+    }
+
+    @media (max-width: 980px){
+      .reviewLayout{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .reviewPage{
+        width:min(100% - 20px, 100%);
+        margin:16px auto 40px;
+      }
+
+      .cardHead,
+      .cardBody{
+        padding:16px;
+      }
+
+      .infoGrid{
+        grid-template-columns:1fr;
+      }
+
+      .summaryItem{
+        grid-template-columns:60px minmax(0,1fr);
+      }
+
+      .summaryItem__price{
+        grid-column:2;
+        text-align:right;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="reviewPage">
+    <div class="reviewTop">
+      <div class="reviewTop__left">
+        <div class="reviewKicker">House of Antiques</div>
+        <h1 class="reviewTitle" data-i18n="review_title">Review Order</h1>
+        <div class="reviewSub" data-i18n="review_subtitle">Review your details before payment</div>
+      </div>
+
+      <a class="backBtn" href="checkout.html" data-i18n="back_to_checkout">Back to checkout</a>
+    </div>
+
+    <div id="reviewError" class="errorBox"></div>
+
+    <div class="reviewLayout">
+      <div class="stack">
+        <section class="card">
+          <div class="cardHead">
+            <h2 class="cardTitle" data-i18n="customer_details_title">Customer Details</h2>
+            <div class="cardHint" data-i18n="customer_details_hint">Review the customer information</div>
+          </div>
+
+          <div class="cardBody">
+            <div class="infoGrid">
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="full_name">Full name</div>
+                <div class="infoValue" id="rvFullName">—</div>
+              </div>
+
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="email">Email</div>
+                <div class="infoValue" id="rvEmail">—</div>
+              </div>
+
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="phone">Phone number</div>
+                <div class="infoValue" id="rvPhone">—</div>
+              </div>
+
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="country">Country</div>
+                <div class="infoValue" id="rvCountry">—</div>
+              </div>
+
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="city">City</div>
+                <div class="infoValue" id="rvCity">—</div>
+              </div>
+
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="postal_code">Postal code</div>
+                <div class="infoValue" id="rvPostalCode">—</div>
+              </div>
+
+              <div class="infoItem full">
+                <div class="infoLabel" data-i18n="full_address">Full address</div>
+                <div class="infoValue" id="rvAddress">—</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="cardHead">
+            <h2 class="cardTitle" data-i18n="shipping_billing_title">Shipping & Billing</h2>
+            <div class="cardHint" data-i18n="shipping_billing_hint">Review shipping method and billing address</div>
+          </div>
+
+          <div class="cardBody">
+            <div class="infoGrid">
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="shipping_method">Shipping method</div>
+                <div class="infoValue" id="rvShippingMethod">—</div>
+              </div>
+
+              <div class="infoItem">
+                <div class="infoLabel" data-i18n="billing_mode">Billing address mode</div>
+                <div class="infoValue" id="rvBillingMode">—</div>
+              </div>
+
+              <div class="infoItem full">
+                <div class="infoLabel" data-i18n="billing_address">Billing address</div>
+                <div class="infoValue" id="rvBillingAddress">—</div>
+              </div>
+
+              <div class="infoItem full">
+                <div class="infoLabel" data-i18n="order_notes">Order notes</div>
+                <div class="infoValue" id="rvOrderNotes">—</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="card">
+        <div class="cardHead">
+          <h2 class="cardTitle" data-i18n="order_summary">Order Summary</h2>
+          <div class="cardHint" data-i18n="order_summary_hint">Review your items before payment</div>
+        </div>
+
+        <div class="cardBody">
+          <div id="reviewItems" class="summaryList"></div>
+
+          <div id="reviewEmpty" class="emptyState hidden" data-i18n="review_empty">
+            No checkout data found
+          </div>
+
+          <div id="reviewTotals" class="summaryTotals">
+            <div class="totalRow">
+              <span data-i18n="subtotal">Subtotal</span>
+              <strong id="rvSubtotal">$0</strong>
+            </div>
+
+            <div class="totalRow">
+              <span data-i18n="shipping">Shipping</span>
+              <strong id="rvShipping">$0</strong>
+            </div>
+
+            <div class="totalRow totalRow--grand">
+              <span data-i18n="grand_total">Grand total</span>
+              <strong id="rvGrandTotal">$0</strong>
+            </div>
+          </div>
+
+          <div class="reviewActions">
+            <button id="editBtn" class="secondaryBtn" type="button" data-i18n="edit_details">
+              Edit details
+            </button>
+
+            <button id="payBtn" class="primaryBtn" type="button" data-i18n="continue_to_payment">
+              Continue to payment
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script type="module" src="./index.js"></script>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const CHECKOUT_KEY = "hoa_checkout_v1";
+      const LANG_KEY = "hoa_lang_v7";
+
+      const I18N = {
+        ar: {
+          review_title: "تأكيد البيانات ومراجعة الطلب",
+          review_subtitle: "راجع البيانات قبل الانتقال للدفع",
+          back_to_checkout: "الرجوع إلى صفحة البيانات",
+          customer_details_title: "بيانات العميل",
+          customer_details_hint: "راجع معلومات العميل المدخلة",
+          shipping_billing_title: "الشحن والفاتورة",
+          shipping_billing_hint: "راجع طريقة الشحن وعنوان الفاتورة",
+          full_name: "الاسم الكامل",
+          email: "البريد الإلكتروني",
+          phone: "رقم الهاتف",
+          country: "الدولة",
+          city: "المدينة",
+          postal_code: "الرمز البريدي",
+          full_address: "العنوان الكامل",
+          shipping_method: "طريقة الشحن",
+          billing_mode: "حالة عنوان الفاتورة",
+          billing_address: "عنوان الفاتورة",
+          order_notes: "ملاحظات الطلب",
+          order_summary: "ملخص الطلب",
+          order_summary_hint: "راجع القطع قبل الدفع",
+          review_empty: "لا توجد بيانات طلب محفوظة",
+          subtotal: "المجموع الفرعي",
+          shipping: "الشحن",
+          grand_total: "الإجمالي النهائي",
+          edit_details: "تعديل البيانات",
+          continue_to_payment: "الانتقال إلى الدفع",
+          same_as_shipping: "نفس عنوان الشحن",
+          different_billing: "عنوان فاتورة مختلف",
+          standard_shipping: "شحن عادي",
+          express_shipping: "شحن سريع",
+          no_notes: "لا توجد ملاحظات",
+          code_label: "الكود",
+          price_label: "السعر",
+          qty_label: "الكمية",
+          err_missing_checkout: "لا توجد بيانات Checkout. ارجع لصفحة checkout أولاً."
+        },
+        en: {
+          review_title: "Review Order",
+          review_subtitle: "Review your details before payment",
+          back_to_checkout: "Back to checkout",
+          customer_details_title: "Customer Details",
+          customer_details_hint: "Review the entered customer information",
+          shipping_billing_title: "Shipping & Billing",
+          shipping_billing_hint: "Review shipping method and billing address",
+          full_name: "Full name",
+          email: "Email",
+          phone: "Phone number",
+          country: "Country",
+          city: "City",
+          postal_code: "Postal code",
+          full_address: "Full address",
+          shipping_method: "Shipping method",
+          billing_mode: "Billing address mode",
+          billing_address: "Billing address",
+          order_notes: "Order notes",
+          order_summary: "Order Summary",
+          order_summary_hint: "Review items before payment",
+          review_empty: "No checkout data found",
+          subtotal: "Subtotal",
+          shipping: "Shipping",
+          grand_total: "Grand total",
+          edit_details: "Edit details",
+          continue_to_payment: "Continue to payment",
+          same_as_shipping: "Same as shipping address",
+          different_billing: "Different billing address",
+          standard_shipping: "Standard Shipping",
+          express_shipping: "Express Shipping",
+          no_notes: "No notes",
+          code_label: "Code",
+          price_label: "Price",
+          qty_label: "Quantity",
+          err_missing_checkout: "No checkout data found. Go back to checkout first."
+        },
+        ku: {
+          review_title: "پشتڕاستکردنەوە و پێداچوونەوەی داوا",
+          review_subtitle: "پێش چوون بۆ پارەدان زانیارییەکان بپشکنە",
+          back_to_checkout: "گەڕانەوە بۆ لاپەڕەی زانیاری",
+          customer_details_title: "زانیاری کڕیار",
+          customer_details_hint: "زانیارییەکانی کڕیار بپشکنە",
+          shipping_billing_title: "گەیاندن و پسوڵە",
+          shipping_billing_hint: "شێوازی گەیاندن و ناونیشانی پسوڵە بپشکنە",
+          full_name: "ناوی تەواو",
+          email: "ئیمەیڵ",
+          phone: "ژمارەی تەلەفۆن",
+          country: "وڵات",
+          city: "شار",
+          postal_code: "کۆدی پۆستە",
+          full_address: "ناونیشانی تەواو",
+          shipping_method: "شێوازی گەیاندن",
+          billing_mode: "دۆخی ناونیشانی پسوڵە",
+          billing_address: "ناونیشانی پسوڵە",
+          order_notes: "تێبینییەکانی داوا",
+          order_summary: "پوختەی داوا",
+          order_summary_hint: "پێش پارەدان کاڵاکان بپشکنە",
+          review_empty: "هیچ زانیارییەکی داوا نەدۆزرایەوە",
+          subtotal: "کۆی لاوەکی",
+          shipping: "گەیاندن",
+          grand_total: "کۆی گشتی",
+          edit_details: "دەستکاریکردنی زانیاری",
+          continue_to_payment: "چوون بۆ پارەدان",
+          same_as_shipping: "هەمان ناونیشانی گەیاندن",
+          different_billing: "ناونیشانی پسوڵە جیاوازە",
+          standard_shipping: "گەیاندنی ئاسایی",
+          express_shipping: "گەیاندنی خێرا",
+          no_notes: "هیچ تێبینییەک نییە",
+          code_label: "کۆد",
+          price_label: "نرخ",
+          qty_label: "دانە",
+          err_missing_checkout: "زانیاری Checkout نییە. سەرەتا بگەڕێوە بۆ checkout."
+        }
+      };
+
+      const $ = (id) => document.getElementById(id);
+
+      function safeText(v) {
+        return v == null || v === "" ? "—" : String(v);
+      }
+
+      function getLang() {
+        return localStorage.getItem(LANG_KEY) || "ar";
+      }
+
+      function t(key) {
+        const lang = getLang();
+        return (I18N[lang] && I18N[lang][key]) || I18N.ar[key] || key;
+      }
+
+      function applyLangToDOM() {
+        const lang = getLang();
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (key) el.textContent = t(key);
+        });
+
+        document.title = t("review_title") + " | House of Antiques";
+      }
+
+      function formatUSD(num) {
+        const n = Number(num || 0);
+        return "$" + n.toLocaleString("en-US");
+      }
+
+      function getCheckoutData() {
+        try {
+          const raw = localStorage.getItem(CHECKOUT_KEY);
+          return raw ? JSON.parse(raw) : null;
+        } catch {
+          return null;
+        }
+      }
+
+      function getProducts() {
+        if (Array.isArray(window.PRODUCTS)) return window.PRODUCTS;
+        if (Array.isArray(window.HOA_PRODUCTS)) return window.HOA_PRODUCTS;
+        if (Array.isArray(window.products)) return window.products;
+        return [];
+      }
+
+      function pickText(obj, field) {
+        const lang = getLang();
+        const v = obj && obj[field];
+
+        if (v && typeof v === "object" && !Array.isArray(v)) {
+          return String(v[lang] || v.ar || v.en || v.ku || "");
+        }
+
+        return String(v || "");
+      }
+
+      function findProductById(id) {
+        const products = getProducts();
+        return products.find((p) => String(p.id) === String(id)) || null;
+      }
+
+      function showError(msg) {
+        const box = $("reviewError");
+        box.style.display = "block";
+        box.textContent = msg;
+      }
+
+      function setText(id, value) {
+        $(id).textContent = safeText(value);
+      }
+
+      function getShippingMethodLabel(method) {
+        if (method === "express") return t("express_shipping");
+        return t("standard_shipping");
+      }
+
+      function getBillingModeLabel(isSame) {
+        return isSame ? t("same_as_shipping") : t("different_billing");
+      }
+
+      function buildItemsFromCheckout(data) {
+        const products = getProducts();
+
+        return (Array.isArray(data.cartItems) ? data.cartItems : []).map((item) => {
+          const product = products.find((p) => String(p.id) === String(item.id)) || null;
+          const qty = Number(item.qty || 1);
+
+          if (!product) {
+            return {
+              id: String(item.id),
+              qty,
+              product: null,
+              lineTotal: 0
+            };
+          }
+
+          const price = Number(product.priceNumber || 0);
+          return {
+            id: String(item.id),
+            qty,
+            product,
+            lineTotal: price * qty
+          };
+        });
+      }
+
+      function renderItems(data) {
+        const wrap = $("reviewItems");
+        const empty = $("reviewEmpty");
+        const totals = $("reviewTotals");
+        const items = buildItemsFromCheckout(data);
+
+        if (!items.length) {
+          wrap.innerHTML = "";
+          empty.classList.remove("hidden");
+          totals.classList.add("hidden");
+          return;
+        }
+
+        empty.classList.add("hidden");
+        totals.classList.remove("hidden");
+
+        wrap.innerHTML = items.map((item) => {
+          const p = item.product;
+          const title = p ? (pickText(p, "name") || "Product") : item.id;
+          const code = p ? String(p.code || p.id || "—") : item.id;
+          const img = p ? (p.image || (Array.isArray(p.images) ? p.images[0] : "") || "") : "";
+          const price = p ? formatUSD(Number(p.priceNumber || 0)) : "$0";
+
+          return `
+            <div class="summaryItem">
+              <img class="summaryItem__img" src="${img}" alt="${title}">
+              <div>
+                <div class="summaryItem__title">${title}</div>
+                <div class="summaryItem__meta">
+                  ${t("code_label")}: ${code}<br>
+                  ${t("price_label")}: ${price}<br>
+                  ${t("qty_label")}: ${item.qty}
+                </div>
+              </div>
+              <div class="summaryItem__price">${formatUSD(item.lineTotal)}</div>
+            </div>
+          `;
+        }).join("");
+
+        const subtotal = Number(data?.totals?.subtotal || 0);
+        const shipping = Number(data?.totals?.shipping || 0);
+        const total = Number(data?.totals?.total || 0);
+
+        $("rvSubtotal").textContent = formatUSD(subtotal);
+        $("rvShipping").textContent = formatUSD(shipping);
+        $("rvGrandTotal").textContent = formatUSD(total);
+      }
+
+      function renderReview() {
+        const data = getCheckoutData();
+
+        if (!data) {
+          showError(t("err_missing_checkout"));
+          $("reviewEmpty").classList.remove("hidden");
+          $("reviewTotals").classList.add("hidden");
+          $("payBtn").disabled = true;
+          $("payBtn").style.opacity = ".55";
+          return;
+        }
+
+        setText("rvFullName", data.fullName);
+        setText("rvEmail", data.email);
+        setText("rvPhone", data.phone);
+        setText("rvCountry", data.country);
+        setText("rvCity", data.city);
+        setText("rvPostalCode", data.postalCode);
+        setText("rvAddress", data.address);
+        setText("rvShippingMethod", getShippingMethodLabel(data.shippingMethod));
+        setText("rvBillingMode", getBillingModeLabel(Boolean(data.billingSame)));
+        setText("rvBillingAddress", data.billingAddress);
+        setText("rvOrderNotes", data.orderNotes || t("no_notes"));
+
+        renderItems(data);
+      }
+
+      function initButtons() {
+        $("editBtn").addEventListener("click", () => {
+          window.location.href = "checkout.html";
+        });
+
+        $("payBtn").addEventListener("click", () => {
+          window.location.href = "payment.html";
+        });
+      }
+
+      function waitForProductsAndRender(retries = 40) {
+        const products = getProducts();
+        const data = getCheckoutData();
+
+        if (!data) {
+          renderReview();
+          return;
+        }
+
+        if (products.length) {
+          renderReview();
+          return;
+        }
+
+        if (retries <= 0) {
+          renderReview();
+          return;
+        }
+
+        setTimeout(() => waitForProductsAndRender(retries - 1), 150);
+      }
+
+      function init() {
+        applyLangToDOM();
+        initButtons();
+        waitForProductsAndRender();
+
+        window.addEventListener("storage", (e) => {
+          if (e.key === LANG_KEY) {
+            applyLangToDOM();
+            waitForProductsAndRender(1);
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", init);
+    })();
+  </script>
+</body>
+</html>
