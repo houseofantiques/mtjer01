@@ -16,9 +16,9 @@ export const ARABIC_CALLIGRAPHY_PRODUCTS = [
       en: "An authentic Arabic calligraphy artwork written in a balanced classical style, executed on traditional paper and framed in an elegant wooden frame. The piece conveys a strong spiritual and aesthetic presence, with refined harmony between calligraphic composition and spatial balance. Ideal for wall display or private art collections. Dimensions: 60 × 30 cm, with an approximate age exceeding 60 years.",
       ku: "تابلۆیەکی ڕەسەنی خەتّی عەرەبی بە شێوازی کلاسیکی هاوسەنگ نووسراو، لەسەر پەڕەی نەریتی جێبەجێکراو و لە ناو چوارچێوەیەکی دارێکی جوان دانراوە. پارچەکە ڕووحێکی ڕووحانی و جوانی بەرز لەخۆ دەگرێت، بە هاوسەنگی ورد لە نێوان پێکهاتەی خەت و بۆشاییەکان. گونجاوە بۆ پیشاندانی سەردیواری یان کۆمەڵگەی هونەری تایبەتی. قەبارە: ٦٠ × ٣٠ سم، بە تەمەنێکی نزیکەی زیاتر لە ٦٠ ساڵ."
     },
-    priceNumber: 300000,
-    currency: "IQD",
-    price: "300,000 د.ع",
+    priceNumber: 200,
+    currency: "usd",
+    price: "$200",
     status: "available",
     keywords: {
       ar: "",

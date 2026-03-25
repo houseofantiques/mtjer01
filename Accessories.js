@@ -1,39 +1,5 @@
 export const ACCESSORIES_PRODUCTS = [
   {
-    id: "HOA-WPN-033",
-    category: {
-      ar: "اكسسوارات",
-      en: "Accessories",
-      ku: "ئاکسسوارات"
-    },
-    sourceCategory: "أسلحة تراثية",
-    name: {
-      ar: "خنجر عثماني تراثي",
-      en: "Ottoman Heritage Dagger",
-      ku: "خەنجەری میراثی عوسمانی"
-    },
-    desc: {
-      ar: "قطعة تراثية من الحقبة العثمانية، بطول 40 سم، تتميّز بنصل فولاذي ومقبض مزخرف بتفاصيل تقليدية تعكس الحرفية العثمانية. تُعرض هذه القطعة لأغراض توثيقية/متحفية ضمن المجموعات التراثية.",
-      en: "A heritage piece from the Ottoman era, 40 cm in length, featuring a steel blade and an ornamented handle that reflects Ottoman craftsmanship. Presented for documentary/museum display purposes within heritage collections.",
-      ku: "پارچەیەکی میراثی لە قۆناغی عوسمانی، بە درێژی 40 سم، نصلێکی فولادی و دەستگرتنێکی ڕازاو هەیە کە پیشەسازی عوسمانی دەردەخات. ئەم پارچەیە بۆ مەبەستی بەڵگەنامەیی/پیشاندانی مۆزەیی لە ناو کۆمەڵە پارچە میراثییەکاندا پیشان دەدرێت."
-    },
-    priceNumber: 1450000,
-    currency: "IQD",
-    price: "1,450,000 د.ع",
-    status: "available",
-    keywords: {
-      ar: "",
-      en: "",
-      ku: ""
-    },
-    featured: true,
-    auction: false,
-    images: [
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/hoa-trl-033_hom0i1"
-    ],
-    image: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/hoa-trl-033_hom0i1"
-  },
-  {
     id: "hoa-cop-061_cthzws",
     category: {
       ar: "اكسسوارات",
@@ -51,14 +17,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An original bronze medal bearing an eagle emblem, preserved inside its original velvet-lined case. A historical piece with a formal character, reflecting a military or honorary period, suitable for museum display or for collectors of medals and commemorative artifacts.",
       ku: "میداڵیایەکی برۆنزی ڕەسەن بە هێمای هەڵقەوتی هەڵۆ، پارێزراوە لە ناو قاپی ڕەسەنی خۆی بە ئاسترێکی مەخمەلی. پارچەیەکی مێژوویی بە تایبەتمەندی فەرمی کە سەردەمی سەربازی یان پێزانینی پیشان دەدات، گونجاوە بۆ پیشاندانی مۆزەیی یان بۆ کۆمەڵکارانی میداڵیا و پارچە تووثیقییەکان."
     },
-    priceNumber: 75000,
-    currency: "IQD",
-    price: "75,000",
+    priceNumber: 57,
+    currency: "USD",
+    price: "$57",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "ميدالية برونزية, نيشان عسكري, ميدالية أصلية, مقتنيات عسكرية, تحف تاريخية, علبة أصلية, نياشين قديمة, بيت التحفيات",
+      en: "military bronze medal, antique medal, original medal case, historical military collectible, commemorative artifact, House of Antiques Baghdad",
+      ku: "mîdalya bronzî, nişanê leşkerî, parça mîjûyî, koleksiyonî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -95,14 +61,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver bracelet with an elegant open design, centered with two colored stones—one turquoise and the other amber—surrounded by fine silver details. Approximately over 40 years old, it reflects a refined classical style and is suitable for museum display or private collections.",
       ku: "دەستبەندێکی زیوی ئەنتیک بە دیزاینێکی کراو و جوان، لە ناوەڕاستیدا دوو بەردی ڕەنگاوڕەنگ هەیە—یەکێکی فیرووزی و یەکێکی کەهرەمانی—بە وردەکارییە زیوییەکان دەوروبەریان. تەمەنەکەی نزیکەی زیاتر لە ٤٠ ساڵە و شێوازی کلاسیکی بەرز پیشان دەدات، گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگە تایبەتی."
     },
-    priceNumber: 250000,
-    currency: "IQD",
-    price: "250,000 د.ع",
+    priceNumber: 191,
+    currency: "USD",
+    price: "$191",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سوار فضة, سوار بحجرين, حجر فيروزي, حجر كهرماني, مجوهرات تراثية, اكسسوارات فضة, سوار أنتيك, بيت التحفيات",
+      en: "silver bracelet, antique silver bracelet, turquoise stone bracelet, amber stone bracelet, heritage jewelry, House of Antiques Baghdad",
+      ku: "destbendê zîv, berekê fîrûzî, kehrubanî, zêwerê mîrasî, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -130,14 +96,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver bracelet with an elegant open design, centered with a freely polished natural white stone set within a finely decorated silver frame. The piece reflects a calm classical taste and is suitable for museum display or private collections, with an approximate age of over 35 years.",
       ku: "دەستبەندێکی زیوی ئەنتیک بە دیزاینێکی کراو و جوان، لە ناوەڕاستیدا بەردێکی سپی سرووشتی بە شێوەی ئازاد پۆڵیشکراو دانراوە لە ناو چوارچێوەیەکی زیویی ورد ڕازێنراو. پارچەکە ذوقێکی کلاسیکی ئارام پیشان دەدات و گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگە تایبەتی، بە تەمەنێکی نزیکەی زیاتر لە ٣٥ ساڵ."
     },
-    priceNumber: 175000,
-    currency: "IQD",
-    price: "175,000د.ع",
+    priceNumber: 134,
+    currency: "USD",
+    price: "$134",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سوار فضة, حجر أبيض طبيعي, سوار أنتيك, مجوهرات تراثية, اكسسوارات فضة, سوار كلاسيكي, بيت التحفيات",
+      en: "silver bracelet, natural white stone bracelet, antique silver jewelry, heritage accessory, classic silver bracelet, House of Antiques Baghdad",
+      ku: "destbendê zîv, berda spî ya siruştî, zêwerê antîk, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -165,14 +131,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver bracelet with an elegant open design, centered with a freely polished natural white stone set within a finely decorated silver frame. The piece reflects a calm classical taste and is suitable for museum display or private collections, with an approximate age of over 35 years.",
       ku: "دەستبەندێکی زیوی ئەنتیک بە دیزاینێکی کراو و جوان، لە ناوەڕاستیدا بەردێکی سپی سرووشتی بە شێوەی ئازاد پۆڵیشکراو دانراوە لە ناو چوارچێوەیەکی زیویی ورد ڕازێنراو. پارچەکە ذوقێکی کلاسیکی ئارام پیشان دەدات و گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگە تایبەتی، بە تەمەنێکی نزیکەی زیاتر لە ٣٥ ساڵ."
     },
-    priceNumber: 180000,
-    currency: "IQD",
-    price: "180,000 د.ع",
+    priceNumber: 137,
+    currency: "USD",
+    price: "$137",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سوار فضة, حجر أبيض طبيعي, سوار مفتوح, مجوهرات أنتيك, اكسسوارات تراثية, بيت التحفيات",
+      en: "silver bracelet, natural white stone, antique silver bracelet, heritage jewelry, collectible accessory, House of Antiques Baghdad",
+      ku: "destbendê zîv, berda spî, antîk, zêwerê mîrasî, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -200,14 +166,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver bracelet with an open design centered around an ornate butterfly motif, set with natural colored stones in blue and orange within a delicate silver frame. The piece combines aesthetic symbolism with fine craftsmanship, making it suitable for museum display or private collections, with an approximate age of over 30 years.",
       ku: "دەستبەندێکی زیوی ئەنتیک بە دیزاینێکی کراو، لە ناوەڕاستیدا شێوەی فڕۆکەیەکی ڕازێنراو هەیە کە بەردە ڕەنگاوڕەنگە سرووشتییەکان بە ڕەنگی شین و پڕتەقاڵی لە ناو چوارچێوەیەکی زیویی ورد دانراون. پارچەکە ڕەمزە جوانی و وردکاری پیشەسازی تێکەڵ دەکات و گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگە تایبەتی، بە تەمەنێکی نزیکەی زیاتر لە ٣٠ ساڵ."
     },
-    priceNumber: 260000,
-    currency: "IQD",
-    price: "260,000 د.ع",
+    priceNumber: 198,
+    currency: "USD",
+    price: "$198",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سوار فضة, فراشة فضية, أحجار ملونة, مجوهرات أنتيك, سوار نسائي, اكسسوارات تراثية, بيت التحفيات",
+      en: "silver bracelet butterfly design, antique bracelet, colored stone jewelry, heritage silver accessory, House of Antiques Baghdad",
+      ku: "destbendê zîv, firoke, berên rengîn, zêwerê antîk, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -235,14 +201,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver necklace with an elegant classical design, featuring a teardrop-shaped pendant set with a polished deep-blue stone, framed by finely decorated silver that enhances the stone’s beauty and balance. The piece reflects refined taste and is suitable for museum display or private collections, with an approximate age of over 40 years.",
       ku: "قڵادەیەکی زیوی ئەنتیک بە دیزاینێکی کلاسیکی جوان، کە پارچەیەکی بە شێوەی فرمێسک لەخۆ دەگرێت و بەردێکی شینی تۆخ بە شێوەی پۆڵیشکراو تێدا دانراوە، دەوروبەریش بە چوارچێوەیەکی زیویی ورد ڕازێنراوە کە جوانی و هاوسەنگی بەردەکە دەردەخات. پارچەکە ذوقێکی بەرز پیشان دەدات و گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگە تایبەتی، بە تەمەنێکی نزیکەی زیاتر لە ٤٠ ساڵ."
     },
-    priceNumber: 450000,
-    currency: "IQD",
-    price: "450,000 د.ع",
+    priceNumber: 343,
+    currency: "USD",
+    price: "$343",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "قلادة فضة, حجر أزرق, قلادة دمعة, مجوهرات أنتيك, فضة كلاسيكية, اكسسوارات تراثية, بيت التحفيات",
+      en: "silver necklace, teardrop blue stone necklace, antique silver pendant, heritage jewelry, House of Antiques Baghdad",
+      ku: "qeladeya zîv, berda şîn, forma hêstir, zêwerê antîk, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -270,14 +236,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An original Ottoman felt hat made of natural felt, dating back to the late Ottoman period with an age exceeding 140 years. It features a traditional conical form and hand-drawn calligraphic decorations carrying symbolic inscriptions, executed in dark ink on felt fabric. A rare piece reflecting deep cultural and historical identity, historically used as part of official or religious attire. Suitable for museum display or private historical collections.",
       ku: "کڵاوێکی عوسمانی ڕەسەن لە لێبادی سرووشتی دروستکراو، کە بۆ کۆتایی سەردەمی عوسمانی دەگەڕێتەوە و زیاتر لە ١٤٠ ساڵ تەمەن هەیە. بە شێوەی کۆنیکی نەریتی و ڕازاندنی هێڵی دەستی ناسراوە کە نووسین و ڕەمزە مێژووییەکان لەخۆ دەگرن، بە مەرەکی ڕەش لەسەر نسیجی لێباد جێبەجێکراون. پارچەیەکی دەگمەنە کە ناسنامەی کەلتووری و مێژوویی قووڵ پیشان دەدات، و لەو سەردەمەدا وەک بەشێک لە جلی فەرمی یان ئایینی بەکاردەهات. گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگەی مێژوویی تایبەتی."
     },
-    priceNumber: 1500000,
-    currency: "IQD",
-    price: "1,500,000 د.ع",
+    priceNumber: 1145,
+    currency: "USD",
+    price: "$1,145",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "قبعة عثمانية, قبعة لباد, زي عثماني, مقتنيات تاريخية, تحف نادرة, اكسسوارات تاريخية, بيت التحفيات",
+      en: "Ottoman felt hat, historical Ottoman cap, antique felt headwear, rare heritage accessory, House of Antiques Baghdad",
+      ku: "kilawe osmanî, lebad, akseswarê mîjûyî, parça nâdir, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -305,14 +271,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "A pair of antique silver earrings with an elegant artistic design, each centered with a polished black stone set within a finely decorated silver frame inspired by classical style. The piece reflects an ideal balance between boldness and sophistication, dating back approximately 40 years, making it suitable for museum display or distinguished heritage accessory collections.",
       ku: "دوو گوڵاوێژی زیوی ئەنتیک بە دیزاینێکی هونەری جوان، هەر یەکێک لە بەردێکی ڕەشی پۆڵیشکراو پێکهاتووە کە لە ناو چوارچێوەیەکی زیویی ورد بە شێوازی کلاسیکی ڕازێنراو دانراوە. پارچەکە هاوسەنگی نێوان بوێری و شێوەدارێتی پیشان دەدات و تەمەنەکەی نزیکەی ٤٠ ساڵە، بۆیە گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگەی ئێکسسسواراتی میراثی تایبەتی."
     },
-    priceNumber: 150000,
-    currency: "IQD",
-    price: "150,000 د.ع",
+    priceNumber: 114,
+    currency: "USD",
+    price: "$114",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "تراجي فضة, حجر أسود, اقراط فضة, مجوهرات أنتيك, اكسسوارات تراثية, بيت التحفيات",
+      en: "silver earrings, black stone earrings, antique silver jewelry, heritage accessories, House of Antiques Baghdad",
+      ku: "golawejê zîv, berda reş, zêwerê antîk, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -340,14 +306,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver ring with a simple and elegant design, featuring a subtle geometric detail centered with a small silver floral motif that adds a refined and calm touch. The piece reflects a refined classical taste and is suitable for daily wear or display within heritage accessory collections, with an approximate age of over 30 years.",
       ku: "ئەنگوستەوانەیەکی زیوی ئەنتیک بە دیزاینێکی سادە و جوان، تایبەتمەندییەکی هندەسی نرمی هەیە کە لە ناوەڕاستیدا گوڵێکی زیویی بچووک دانراوە و دەستەوەردێکی ئارام و فەخمی پێدەدات. پارچەکە ذوقێکی کلاسیکی بەرز پیشان دەدات و گونجاوە بۆ بەکارهێنانی ڕۆژانە یان پیشاندانی لە کۆمەڵگەی ئێکسسسواراتی میراثی، بە تەمەنێکی نزیکەی زیاتر لە ٣٠ ساڵ."
     },
-    priceNumber: 250000,
-    currency: "IQD",
-    price: "250,000 د.ع",
+    priceNumber: 191,
+    currency: "USD",
+    price: "$191",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "محبس فضة, خاتم فضة, تصميم كلاسيكي, مجوهرات أنتيك, فضة تراثية, اكسسوارات نسائية, بيت التحفيات",
+      en: "silver ring, antique silver ring, classical design ring, heritage jewelry, House of Antiques Baghdad",
+      ku: "engustewaneya zîv, xatimê klassîk, zêwerê mîrasî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -366,8 +332,8 @@ export const ACCESSORIES_PRODUCTS = [
     },
     sourceCategory: "إكسسوارات",
     name: {
-      ar: "خاتم فضة أنتيك مجدول بتصميم تراثي",
-      en: "Antique ring Silver Bracelet with Heritage Design",
+      ar: "سوار فضة أنتيك مجدول بتصميم تراثي",
+      en: "Antique Braided Silver Bracelet with Heritage Design",
       ku: "دەستبەندێکی زیوی ئەنتیک بە شێوەی پێچراو و دیزاینی میراثی"
     },
     desc: {
@@ -375,14 +341,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver bracelet with an intricate braided design, composed of multiple interwoven silver wires flowing harmoniously to reflect high craftsmanship and refined heritage taste. The piece combines aesthetic strength with classical simplicity, making it suitable for museum display or inclusion in rare accessory collections, with an approximate age of over 40 years.",
       ku: "دەستبەندێکی زیوی ئەنتیک بە دیزاینێکی پێچراوی ورد، پێکهاتوو لە چەندین تارە زیویی تێکەڵبوو کە بە نرمی پێکەوە پێچراون و پیشەسازی بەرز و ذوقی میراثی بەرز پیشان دەدات. پارچەکە بەهێزی جوانی و سادەیی کلاسیکی تێکەڵ دەکات و گونجاوە بۆ پیشاندانی مۆزەیی یان کۆمەڵگەی ئێکسسسواراتی دەگمەن، بە تەمەنێکی نزیکەی زیاتر لە ٤٠ ساڵ."
     },
-    priceNumber: 180000,
-    currency: "IQD",
-    price: "180,000 د.ع",
+    priceNumber: 137,
+    currency: "USD",
+    price: "$137",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سوار فضة مجدول, سوار أنتيك, فضة تراثية, مجوهرات نادرة, اكسسوارات كلاسيكية, بيت التحفيات",
+      en: "braided silver bracelet, antique silver bracelet, rare heritage jewelry, classic accessory, House of Antiques Baghdad",
+      ku: "destbendê zîv yê pêçraw, antîk, zêwerê nâdir, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -410,14 +376,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver ring featuring a design based on multiple parallel silver wires, gathered at the center with a finely crafted decorative detail that gives the piece a strong and balanced presence. It carries a clear heritage character with an elegant geometric touch, making it ideal for collection or museum display within rare accessory collections, with an approximate age of over 45 years.",
       ku: "خاتمێکی زیوی ئەنتیک پێکهاتوو لە چەندین تاری زیویی هاوتا و فرە کە لە ناوەڕاستدا بە وردەکارییەکی ڕازێنراوی ورد کۆدەبنەوە و ئامادەییەکی بەهێز و هاوسەنگ دروست دەکەن. تایبەتمەندییەکی میراثی ڕوون و تێکەڵ بە دەستەوەردێکی هندەسی جوان هەیە، و پارچەیەکی گونجاوە بۆ کۆکردنەوە یان پیشاندانی مۆزەیی لە کۆمەڵگەی ئێکسسسواراتی دەگمەن، بە تەمەنێکی نزیکەی زیاتر لە ٤٥ ساڵ."
     },
-    priceNumber: 299000,
-    currency: "IQD",
-    price: "299,000د.ع",
+    priceNumber: 228,
+    currency: "USD",
+    price: "$228",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "خاتم فضة, خاتم أنتيك, تصميم هندسي, فضة متعددة الأسلاك, مجوهرات تراثية, بيت التحفيات",
+      en: "antique silver ring, multi wire silver ring, geometric ring, heritage jewelry, House of Antiques Baghdad",
+      ku: "xatimê zîv, antîk, tarên pir, dizaynê هندسی, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -445,14 +411,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique silver ring with a distinctive geometric design, centered with a polished black stone set along a smooth curved line, surrounded by fine dotted silver details that create a striking visual contrast. The piece carries a contemporary artistic character with a heritage spirit, making it ideal for collectors of rare accessories with strong identity, with an approximate age of over 30 years.",
       ku: "ئەنگوستەوانەیەکی زیوی ئەنتیک بە دیزاینێکی هندەسی تایبەت، لە ناوەڕاستیدا بەردێکی ڕەشی پۆڵیشکراو دانراوە بە هێڵێکی نرمی خەمراو، دەوروبەریش بە وردەکارییە خاڵی زیویی ڕازێنراوە کە جیاوازییەکی بینراوی بەهێز دروست دەکات. پارچەکە تایبەتمەندی هونەری هاوچەرخ بە ڕووحێکی میراثی هەیە و گونجاوە بۆ ئەوانەی حەزیان بە ئێکسسسواراتی دەگمەن و ناسنامەی بەهێز هەیە، بە تەمەنێکی نزیکەی زیاتر لە ٣٠ ساڵ."
     },
-    priceNumber: 120000,
-    currency: "IQD",
-    price: "120,000 د.ع",
+    priceNumber: 92,
+    currency: "USD",
+    price: "$92",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "محبس فضة, حجر أسود, خاتم هندسي, مجوهرات أنتيك, فضة تراثية, بيت التحفيات",
+      en: "geometric silver ring, black stone silver ring, antique ring, heritage jewelry, House of Antiques Baghdad",
+      ku: "engustewaneya zîv, berda reş, xatimê هندسی, antîk, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -480,14 +446,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "A pair of antique silver earrings featuring an elegant design based on open flowing lines that end with a movable silver teardrop, giving the piece a light visual feel and gentle movement when worn. The design blends simplicity and sophistication with a calm artistic character, suitable for classical collections or museum display, with an approximate age of over 30 years.",
       ku: "دوو گوڵاوێژی زیوی ئەنتیک بە دیزاینێکی جوان کە لە هێڵە نرمییە کراوەکان پێکهاتووە و بە فرمێسکێکی زیویی جوڵاو کۆتایی دێت، کە سوکی بینراوی و جوڵەیەکی ئارام لە کاتی پۆشین دروست دەکات. دیزاینەکە سادەیی و شێوەدارێتی لەگەڵ تایبەتمەندی هونەری ئارام تێکەڵ دەکات، گونجاوە بۆ کۆمەڵگە کلاسیکی یان پیشاندانی مۆزەیی، بە تەمەنێکی نزیکەی زیاتر لە ٣٠ ساڵ."
     },
-    priceNumber: 180000,
-    currency: "IQD",
-    price: "180,000 د.ع",
+    priceNumber: 137,
+    currency: "USD",
+    price: "$137",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "تراجي فضة, قطرة مزدوجة, أقراط أنتيك, اكسسوارات فضة, مجوهرات كلاسيكية, بيت التحفيات",
+      en: "silver earrings, double teardrop earrings, antique silver jewelry, classic accessory, House of Antiques Baghdad",
+      ku: "golawejê zîv, du forma hêstir, zêwerê antîk, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -514,14 +480,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An elegant antique metal box with finely hand-engraved details, featuring an octagonal shape and a two-tier velvet-lined interior with an original top lock. Traditionally used to store jewelry or precious items, making it a rare and collectible display piece.",
       ku: "سندوقێکی ئەنتیکەی مێتال بە نەخشەی دەستی ورد، بە شێوەی هەشت‌گۆشە و ناوەوەی دوو ئاستی بە مەخمەل، لەگەڵ قفڵی سەرەوەی ڕەسەن. گونجاو بۆ هەڵگرتنی شتە گرنگەکان و نمایشی مۆزەیی."
     },
-    priceNumber: 680000,
-    currency: "IQD",
-    price: "680,000 د.ع",
+    priceNumber: 519,
+    currency: "USD",
+    price: "$519",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "صندوق أنتيك, صندوق مجوهرات, علبة معدنية قديمة, قفل أصلي, تحف نادرة, ديكور كلاسيكي, بيت التحفيات",
+      en: "two tier antique metal box, antique jewelry box, collectible storage box, House of Antiques Baghdad",
+      ku: "sundûqê antîk, qutîya zêweran, qifla resen, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -549,14 +515,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "A small two-piece antique metal lighter with a cylindrical design and aged brass finish. Measuring 7 cm in height, it was traditionally used as a desk or personal lighter and is ideal for collectors of classic accessories.",
       ku: "ولاعة ئەنتیکی مێتال بە دوو پارچە، بە دیزاینی ئەستوانەیی سادە و ڕەنگی برۆنزەی کۆن. بەرزی 7 سم هەیە و گونجاوە بۆ کۆکراوەکان و نمایشی کلاسیکی."
     },
-    priceNumber: 99000,
-    currency: "IQD",
-    price: "99,000 د.ع",
+    priceNumber: 76,
+    currency: "USD",
+    price: "$76",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "ولاعة أنتيك, ولاعة قديمة, اكسسوار كلاسيكي, مقتنيات معدنية, تحف صغيرة, بيت التحفيات",
+      en: "two piece antique lighter, vintage lighter, metal collectible, classic accessory, House of Antiques Baghdad",
+      ku: "walaya antîk, akseswarê klasîk, parça biçûk, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -583,14 +549,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "A circular antique storage box finished in black with raised gold decorative inlays. Over 50 years old, it showcases fine craftsmanship and elegant ornamental details, making it ideal for museum display or storing precious items in a classic interior.",
       ku: "سندوقێکی هەڵگرتنی ئەنتیکی بە شێوەی بازنەیی، ڕەشی ڕەنگ و بە نەخشەی زێڕی بەرچاو. تەمەنی زیاتر لە 50 ساڵ هەیە و گونجاوە بۆ نمایشی مۆزەیی یان هەڵگرتنی شتە گرنگەکان."
     },
-    priceNumber: 450000,
-    currency: "IQD",
-    price: "450,000",
+    priceNumber: 343,
+    currency: "USD",
+    price: "$343",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "علبة أنتيك, صندوق تخزين, صندوق أسود ذهبي, ديكور فاخر, حفظ مجوهرات, بيت التحفيات",
+      en: "black antique storage box, gold inlay box, vintage decorative box, classic interior accessory, House of Antiques Baghdad",
+      ku: "sundûqê reş û zêr, qutiya hilanînê, antîk, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -616,14 +582,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "A heavy antique metal lock with its original key, featuring raised hand-crafted decorations and a classic circular design. Over 70 years old, it was traditionally used for securing chests or doors and is a rare collectible piece.",
       ku: "قوفڵێکی ئەنتیکی مێتال بە کلیلە ڕەسەن، بە نەخشەی دەستی بەرچاو و دیزاینی بازنەیی. تەمەنی زیاتر لە 70 ساڵ هەیە و گونجاوە بۆ نمایشی مۆزەیی یان کۆکراوەی ئەنتیک."
     },
-    priceNumber: 120000,
-    currency: "IQD",
-    price: "120,000 د.ع",
+    priceNumber: 92,
+    currency: "USD",
+    price: "$92",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "قفل أنتيك, مفتاح أصلي, قفل قديم, تحف معدنية, مقتنيات نادرة, بيت التحفيات",
+      en: "antique lock with original key, vintage metal lock, rare collectible, House of Antiques Baghdad",
+      ku: "qifla antîk, kilîda resen, parça nâdir, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -649,14 +615,14 @@ export const ACCESSORIES_PRODUCTS = [
       en: "An antique necklace crafted from natural coral stones combined with silver elements. It features a warm, harmonious color palette and an authentic heritage character, reflecting classic traditional jewelry craftsmanship.",
       ku: "گەردەنەوەیەکی کۆن دروستکراو لە مرجانی سروشتی لەگەڵ پارچەکانی زیو، بە ڕەنگاڵەیەکی گەرم و هاوبەش و هەستێکی میراثی ڕەسەن کە هونەری کۆنی دروستکردنی زیوەر پیشان دەدات."
     },
-    priceNumber: 790000,
-    currency: "IQD",
-    price: "790,000 د.ع",
+    priceNumber: 603,
+    currency: "USD",
+    price: "$603",
     status: "available",
     keywords: {
-      ar: "قلادة مرجان, فضة, مجوهرات تراثية, antique coral necklace, coral and silver jewelry, vintage accessories, heritage jewelry, old coral necklace",
-      en: "",
-      ku: ""
+      ar: "قلادة مرجان, قلادة فضة, مجوهرات تراثية, مرجان طبيعي, اكسسوارات أنتيك, بيت التحفيات",
+      en: "antique coral and silver necklace, natural coral jewelry, heritage necklace, House of Antiques Baghdad",
+      ku: "gerdeneweya mercan û zîv, zêwerê mîrasî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -685,16 +651,16 @@ export const ACCESSORIES_PRODUCTS = [
     desc: {
       ar: "حافظة أنتيك فاخرة مطعّمة بقطع من الصدف الطبيعي، بتشطيب يدوي أنيق من الداخل، تعود إلى منتصف القرن العشرين، وتُستخدم لحفظ المجوهرات أو القطع الثمينة.",
       en: "Elegant antique box inlaid with natural mother-of-pearl, featuring refined inner finishing. Dates back to the mid-20th century, ideal for storing jewelry or precious items.",
-      ku: "حافەیەکی دەستکاری‌کراوی کۆن، ڕازاو بە پارچەکانی صدفی سروشتی، ناوەوەی بە نرمی کارکراو، گونجاو بۆ پاراستنی زیوەر و شتی نرخدار."
+      ku: "حافەیەکی دەستکاری‌کراوی کۆن، ڕازاو بە پارچەکانی صدفی سرووشتی، ناوەوەی بە نرمی کارکراو، گونجاو بۆ پاراستنی زیوەر و شتی نرخدار."
     },
-    priceNumber: 999000,
-    currency: "IQD",
-    price: "999,000 د.ع",
+    priceNumber: 762,
+    currency: "USD",
+    price: "$762",
     status: "available",
     keywords: {
-      ar: "حافظة انتيك, صندوق مجوهرات, صدف طبيعي, تحف نادرة, بيت التحفيات, قطع قديمة, اكسسوارات انتيك",
-      en: "antique box, mother of pearl box, vintage jewelry box, antique accessories, rare antiques, house of antiques",
-      ku: "حافەی کۆن, صندوق زیوەر, صدفی سروشتی, پارچە کۆن, ئاکسسوار"
+      ar: "حافظة أنتيك, صندوق مجوهرات, صدف طبيعي, علبة فاخرة, مقتنيات نادرة, اكسسوارات قديمة, بيت التحفيات",
+      en: "antique mother of pearl box, vintage jewelry box, luxury antique storage box, House of Antiques Baghdad",
+      ku: "qutiya zêweran, sedefa siruştî, qutiya antîk, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,

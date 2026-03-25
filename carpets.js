@@ -16,14 +16,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven Turkish heritage carpet distinguished by a repeating architectural composition reminiscent of windows and mihrab forms, executed in a symmetrical geometric style. Rich tones of deep red, indigo, and beige reflect the classical Anatolian character, while the outer border is adorned with delicate floral motifs that enhance its visual balance and museum-worthy presence. A rare piece suitable for wall-mounted display or refined heritage carpet collections.",
       ku: "فرشێکی تورکی کۆن و ڕەسەن بە دەست تێکچراو، ناسراو بە پێکهاتەیەکی ئەندازیاری دووبارەبوو کە وێنەی پەنجەرە و میحراب دەهێنێت، بە شێوازێکی هاوسەنگی هندەسی. ڕەنگە قووڵەکانی سوور، نیلی و بێژ تایبەتمەندی کلاسیکی ئانەتۆلی پیشان دەدەن، هەروەها چوارچێوەی دەرەوە بە نەخشەی گیایینی ورد ڕازێنراوە کە پارچەکە بۆ پیشاندانی مۆزەیی گونجاو دەکات. پارچەیەکی دەگمەنە بۆ پیشاندانی دیواری یان کۆمەڵگەی فرشی میراثی."
     },
-    priceNumber: 195000,
-    currency: "IQD",
-    price: "195,000د.ع",
+    priceNumber: 149,
+    currency: "USD",
+    price: "$149",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة تركية تراثية, سجاد تركي, سجادة أناضولية, سجاد يدوي, سجادة جدارية, سجاد مزخرف, سجاد شرقي, بيت التحفيات",
+      en: "Turkish heritage carpet, Anatolian carpet, handwoven Turkish rug, decorative wall carpet, oriental carpet, House of Antiques Baghdad",
+      ku: "ferşa tirkî, ferşa anatolî, ferşa destdirûst, ferşa dîwarî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -49,14 +49,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven Iranian heritage carpet featuring a geometric central composition built around a multi-sided medallion, surrounded by symmetrical floral motifs. The soft beige, indigo, and brown palette reflects classical Persian aesthetics, while the finely patterned border adds visual harmony and refined elegance. A museum-quality piece suitable for floor or wall display and for distinguished Persian carpet collections.",
       ku: "فرشێکی ئێرانی کۆن و ڕەسەن بە دەست تێکچراو، کە پێکهاتەیەکی ناوەندی هندەسی هەیە لەسەر بنەمای مێدالیایەکی فرەگۆشە، دەوروبەری بە نەخشە گیایینی هاوسەنگ ڕازێنراوە. ڕەنگە ئارامەکانی بێژ، نیلی و قاوی ڕەنگی کلاسیکی فارسی پیشان دەدەن، هەروەها چوارچێوەی دەرەوە بە نەخشەی ورد توازن و جوانی زیاد دەکات. پارچەیەکی شایەنی مۆزەیی بۆ پیشاندانی سەردەمی یان دیواری."
     },
-    priceNumber: 450000,
-    currency: "IQD",
-    price: "450,000د.ع",
+    priceNumber: 343,
+    currency: "USD",
+    price: "$343",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة إيرانية, سجاد فارسي, سجادة تراثية, سجاد يدوي, سجادة مزخرفة, سجاد كلاسيكي, سجاد متحفي, بيت التحفيات",
+      en: "Iranian heritage carpet, Persian rug, handwoven Persian carpet, floral medallion rug, museum carpet, House of Antiques Baghdad",
+      ku: "ferşa îranî, ferşa farsî, ferşa mîrasî, ferşa destdirûst, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -82,14 +82,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet distinguished by a vertical geometric composition rich in symbolic and folk motifs, featuring diamond-shaped medallions aligned along the central axis. Bold tones of red, orange, black, and ivory reflect a tribal and Anatolian character, while the side borders are adorned with small symbolic units that add visual depth and cultural identity. A striking piece suitable for wall-mounted museum display or high-ceiling heritage interiors.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە پێکهاتەیەکی درێژی هندەسی کە پڕە لە هێما و نەخشە گەلییە دووبارەبووەکان، لەگەڵ مێدالیای شێوەی ماسی کە لە ناوەنددا ڕێکخراون. ڕەنگە بەهێزەکانی سوور، پرتەقاڵی، ڕەش و عاجی تایبەتمەندی قبەیڵەیی و ئانەتۆلی پیشان دەدەن، هەروەها چوارچێوەی لاوەکی بە یەکە هێمایی بچووک ڕازێنراوە کە قووڵایی بینینی و ناسنامەی کولتووری زیاد دەکات. پارچەیەکی دیاری بۆ پیشاندانی دیواری مۆزەیی یان شوێنە میراثییەکان."
     },
-    priceNumber: 245000,
-    currency: "IQD",
-    price: "245,000د.ع",
+    priceNumber: 187,
+    currency: "USD",
+    price: "$187",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة هندسية طويلة, سجادة جدارية, سجاد قبلي, سجاد تراثي, سجاد يدوي, سجاد أناضولي, بيت التحفيات",
+      en: "long geometric heritage carpet, wall rug, tribal carpet, Anatolian rug, handwoven heritage carpet, House of Antiques Baghdad",
+      ku: "ferşa هندەسی dirêj, ferşa dîwarî, ferşa eşîrî, ferşa anatolî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -115,14 +115,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet featuring a rich red field adorned with harmonious traditional motifs, framed by decorative white borders that create an elegant visual contrast and highlight the overall composition. The design reflects a classic Oriental carpet character, giving the piece a warm and distinguished presence suitable for floor display in spacious interiors or refined heritage carpet collections.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە زەویەکی سووری قووڵ کە بە نەخشە کلاسیکی هاوسەنگ ڕازێنراوە، دەوروبەری بە حەوافی سپیی ڕازێنراو کە جیاوازی بینینی جوان دروست دەکات و جوانی پێکهاتەکە بەرز دەکات. دیزاینەکە تایبەتمەندی فرشی ڕۆژهەڵاتی کلاسیکی پیشان دەدات و پارچەکە بۆ پیشاندانی سەردەمی لە شوێنە فراوانەکان یان کۆمەڵگەی فرشی میراثی گونجاو دەکات."
     },
-    priceNumber: 176000,
-    currency: "IQD",
-    price: "176,000د.ع",
+    priceNumber: 134,
+    currency: "USD",
+    price: "$134",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة حمراء, سجاد تراثي, سجاد شرقي, سجادة بحواف بيضاء, سجاد يدوي, سجادة كلاسيكية, بيت التحفيات",
+      en: "red heritage carpet, oriental rug, handwoven red carpet, white border carpet, classic rug, House of Antiques Baghdad",
+      ku: "ferşa sor, ferşa mîrasî, ferşa rojhilatî, ferşa bi kena سپی, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -148,14 +148,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet featuring an elegant vertical composition centered around a large dark-blue geometric medallion, surrounded by symmetrical floral motifs. The red field contrasts beautifully with the ivory-decorated borders, reflecting a classic Oriental carpet aesthetic. Its proportions make it ideal for wall-mounted museum display or narrow heritage spaces with strong visual impact.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە پێکهاتەیەکی درێژی جوان کە مێدالیایەکی گەورەی هندەسی بە ڕەنگی شینی قووڵ لە ناوەنددا هەیە و بە نەخشە گیایینی هاوسەنگ دەوروبەری گرتووە. زەویە سوورەکە لەگەڵ چوارچێوەی عاجیی ڕازێنراو جیاوازی بینینی جوان دروست دەکات و تایبەتمەندی فرشی ڕۆژهەڵاتی کلاسیکی پیشان دەدات. قەبارە و ڕێژەکانی گونجاوە بۆ پیشاندانی دیواری مۆزەیی یان شوێنە میراثییە باریکەکان."
     },
-    priceNumber: 560000,
-    currency: "IQD",
-    price: "560,000د.ع",
+    priceNumber: 427,
+    currency: "USD",
+    price: "$427",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة جدارية, سجاد تراثي, سجاد شرقي, ميدالية مركزية, سجاد يدوي, قطعة متحفية, بيت التحفيات",
+      en: "heritage wall carpet, central medallion rug, oriental wall rug, handwoven heritage carpet, museum display rug, House of Antiques Baghdad",
+      ku: "ferşa dîwarî, medalyaya navendî, ferşa mîrasî, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -181,14 +181,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet distinguished by a horizontal composition rich in intricate floral motifs, featuring a soft pinkish-red field centered with a symmetrical decorative element in blue and ivory tones. The outer border is densely adorned with floral patterns set against a deep blue ground, creating refined classical elegance and visual balance. A museum-quality piece suitable for floor display or distinguished Persian carpet collections.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە پێکهاتەیەکی ئاسۆیی پڕ لە نەخشە گیایینی ورد و تێکچوو، بە زەویەکی سووری نرمی خاوێنی کە یەکەیەکی ڕازێنراوی هاوسەنگ بە ڕەنگی شین و عاجی لە ناوەنددا هەیە. چوارچێوەی دەرەوە بە نەخشە گیایینی قووڵ لەسەر بنەمای شینی تۆخ ڕازێنراوە، کە جوانی کلاسیکی و هاوسەنگی بینینی دروست دەکات. پارچەیەکی شایەنی مۆزەیی بۆ پیشاندانی سەردەمی یان کۆمەڵگەی فرشی فارسی."
     },
-    priceNumber: 320000,
-    currency: "IQD",
-    price: "320,000د.ع",
+    priceNumber: 244,
+    currency: "USD",
+    price: "$244",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة فارسية, سجاد نباتي, سجاد تراثي, سجادة يدوية, سجاد إيراني, سجاد كلاسيكي, بيت التحفيات",
+      en: "Persian heritage carpet, floral Persian rug, handwoven Iranian carpet, decorative heritage rug, House of Antiques Baghdad",
+      ku: "ferşa farsî, ferşa giyayînî, ferşa mîrasî, ferşa destdirûst, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -214,14 +214,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet featuring a light-toned field adorned with small repeating geometric and floral motifs that create a harmonious visual rhythm. The composition is framed by a wide deep-blue border richly decorated with floral elements, reflecting classical Persian taste and giving the piece a calm yet elegant presence. Ideal for floor display in spacious interiors or refined heritage carpet collections.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە زەویەکی ڕوون کە بە نەخشەی هندەسی و گیایینی بچووک و دووبارەبوو ڕازێنراوە و هاوسەنگی بینینی دروست دەکات. چوارچێوەی فراوانی شینی تۆخ بە نەخشەی گیایینی قووڵ ڕازێنراوە کە تایبەتمەندی فرشی فارسی کلاسیکی پیشان دەدات. پارچەیەکی ئارام و فەخمی بۆ پیشاندانی سەردەمی لە شوێنە فراوانەکان یان کۆمەڵگەی فرشی میراثی."
     },
-    priceNumber: 240000,
-    currency: "IQD",
-    price: "240,000د.ع",
+    priceNumber: 183,
+    currency: "USD",
+    price: "$183",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة فارسية, زخارف متكررة, سجاد تراثي, سجاد يدوي, سجاد كلاسيكي, سجاد شرقي, بيت التحفيات",
+      en: "Persian heritage carpet, repeating motif rug, handwoven Persian rug, classic oriental carpet, House of Antiques Baghdad",
+      ku: "ferşa farsî, nexaşey dubarebû, ferşa destdirûst, ferşa rojhilatî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -247,14 +247,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet featuring a rich red field covered with small, repeating diamond-shaped geometric motifs in multiple colors, creating a lively visual rhythm. The composition is framed by multiple decorative borders in harmonious tones, adding depth and refined artistic detail. The design reflects a classic tribal and Oriental character, making it ideal for floor display in spacious interiors or vibrant heritage carpet collections.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە زەویەکی سووری قووڵ کە بە یەکە هندەسی ماسی بچووک و دووبارەبوو بە ڕەنگە جیاوازەکان ڕازێنراوە، کە جوڵەیەکی بینینی زیندوو دروست دەکات. چوارچێوەی فرەچەند بە ڕەنگە هاوسەنگەکان قووڵایی و وردەکاری هونەری بەرچاو زیاد دەکات. دیزاینەکە تایبەتمەندی قبەیڵەیی و ڕۆژهەڵاتی کلاسیکی پیشان دەدات و پارچەکە بۆ پیشاندانی سەردەمی لە شوێنە فراوانەکان یان کۆمەڵگەی فرشی میراثی گونجاو دەکات."
     },
-    priceNumber: 475000,
-    currency: "IQD",
-    price: "475,000د.ع",
+    priceNumber: 363,
+    currency: "USD",
+    price: "$363",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة حمراء, سجاد هندسي, سجاد قبلي, سجاد تراثي, سجاد ملون, سجاد شرقي, بيت التحفيات",
+      en: "red heritage carpet, colorful geometric rug, tribal carpet, oriental rug, handwoven heritage rug, House of Antiques Baghdad",
+      ku: "ferşa sor, ferşa hendesi rengîn, ferşa eşîrî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -280,14 +280,14 @@ export const CARPETS_PRODUCTS = [
       en: "An original handwoven heritage carpet distinguished by a symmetrical geometric composition centered around large diamond-shaped motifs, surrounded by repeating tribal patterns set against a dark ground. Bold tones of red, orange, black, and ivory reflect a traditional tribal carpet character, while the outer border is adorned with small symbolic motifs that add visual depth and strong cultural identity. A striking piece suitable for floor or wall display in heritage interiors or museum collections.",
       ku: "فرشێکی میراثی ڕەسەن بە دەست تێکچراو، بە پێکهاتەیەکی هندەسی هاوسەنگ کە یەکە گەورەکانی شێوەی ماسی لە ناوەنددا هەن، دەوروبەری بە نەخشە قبەیلی دووبارەبوو لەسەر بنەمایەکی تۆخ. ڕەنگە بەهێزەکانی سوور، پرتەقاڵی، ڕەش و عاجی تایبەتمەندی فرشی قبەیلی کلاسیکی پیشان دەدەن، هەروەها چوارچێوەی دەرەوە بە یەکە هێمایی بچووک قووڵایی بینینی و ناسنامەی کولتووری زیاد دەکات. پارچەیەکی دیاری بۆ پیشاندانی سەردەمی یان دیواری لە شوێنە میراثییەکان یان کۆمەڵگە مۆزەییەکان."
     },
-    priceNumber: 580000,
-    currency: "IQD",
-    price: "580,000د.ع",
+    priceNumber: 443,
+    currency: "USD",
+    price: "$443",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة قبلية, سجاد هندسي, سجاد تراثي, سجاد يدوي, سجادة جدارية, سجاد شرقي, بيت التحفيات",
+      en: "geometric tribal carpet, handwoven heritage rug, tribal wall carpet, oriental tribal rug, House of Antiques Baghdad",
+      ku: "ferşa eşîrî, ferşa هندەسی, ferşa mîrasî, ferşa dîwarî, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -318,14 +318,14 @@ export const CARPETS_PRODUCTS = [
       en: "158 × 120 cm",
       ku: "١٥٨ × ١٢٠ سم"
     },
-    priceNumber: 375000,
-    currency: "IQD",
-    price: "375,000د.ع",
+    priceNumber: 286,
+    currency: "USD",
+    price: "$286",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة مصورة, سجاد قصصي, سجاد رمزي, سجاد تراثي, سجاد أنتيك, قطعة متحفية, بيت التحفيات",
+      en: "antique pictorial carpet, narrative rug, symbolic heritage carpet, museum rug, collectible antique carpet, House of Antiques Baghdad",
+      ku: "qaliya wêneyî, ferşa çîrokî, ferşa ramzî, ferşa antîk, House of Antiques Baghdad"
     },
     featured: true,
     auction: false,
@@ -357,14 +357,14 @@ export const CARPETS_PRODUCTS = [
       en: "225 × 130 cm",
       ku: "٢٢٥ × ١٣٠ سم"
     },
-    priceNumber: 650000,
-    currency: "IQD",
-    price: "650,000د.ع",
+    priceNumber: 496,
+    currency: "USD",
+    price: "$496",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة هندسية, سجاد شبكي, سجاد أنتيك, سجاد تراثي, سجاد يدوي, سجاد كلاسيكي, بيت التحفيات",
+      en: "geometric grid carpet, antique carpet, handwoven heritage rug, classic patterned rug, House of Antiques Baghdad",
+      ku: "ferşa هندەسی, ferşa torî, qaliya antîk, ferşa destdirûst, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
@@ -396,14 +396,14 @@ export const CARPETS_PRODUCTS = [
       en: "210 × 134 cm",
       ku: "٢١٠ × ١٣٤ سم"
     },
-    priceNumber: 350000,
-    currency: "IQD",
-    price: "350,000د.ع",
+    priceNumber: 267,
+    currency: "USD",
+    price: "$267",
     status: "available",
     keywords: {
-      ar: "",
-      en: "",
-      ku: ""
+      ar: "سجادة هندسية مركزية, سجاد أنتيك, سجاد قبلي, سجاد تراثي, سجاد يدوي, سجاد نادر, بيت التحفيات",
+      en: "antique carpet with central geometric medallion, tribal heritage rug, rare handwoven carpet, House of Antiques Baghdad",
+      ku: "ferşa هندەسی ya navendî, qaliya antîk, ferşa eşîrî, ferşa nâdir, House of Antiques Baghdad"
     },
     featured: false,
     auction: false,
