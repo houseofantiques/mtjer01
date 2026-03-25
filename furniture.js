@@ -51,9 +51,9 @@ export const FURNITURE_PRODUCTS = [
       en: "A rare heritage gramophone and radio crafted from luxury wood, combining record playback and radio in an elegant classic design. Fully functional, with two side cabinets for storing records. Measures 130 cm in height and 120 cm in width. A large, refined piece reflecting peak craftsmanship and audio-era design—ideal for museum display or premium private collections.",
       ku: "گرامافۆن و ڕادیۆیەکی میراثی دەگمەن لە دارێکی لوکس درووستکراوە، لە دیزاینێکی کلاسیکی جواندا یەکگرتووەی کارکردی ئاسطوانە و ڕادیۆیە. تەواو کاردەکات و دوو دۆلابی لاوەکی هەیە بۆ خەزنکردنی ئاسطوانەکان. بەرزی 130 سم و پانی 120 سم. پارچەیەکی گەورە و فاخر کە پێشەسازی بەرز و دیزاینی دەمەنگار پیشان دەدات؛ گونجاو بۆ مۆزە یان کۆمەڵە تایبەتی بەرز."
     },
-    priceNumber: 385,
+    priceNumber: 999,
     currency: "USD",
-    price: "$385",
+    price: "$999",
     status: "available",
     keywords: {
       ar: "كراموفون, راديو قديم, أثاث صوتي, صندوق أسطوانات, تحفة خشبية, جهاز تراثي",
@@ -542,9 +542,9 @@ export const FURNITURE_PRODUCTS = [
       en: "An antique standing wooden ashtray, 55 cm high, hand-carved with intricate decorative patterns and a stable round base. A refined heritage piece suitable for museum display or as a distinctive decorative element.",
       ku: "خۆڵدانەی جگەرە دارەکی کۆن بە بەرزی 55 سم، دەست‌تاشراو بە نەخشە وردەکاری و بنکەی بازنەی بەهێز، پارچەیەکی میراثی جوان بۆ مۆزە یان دیكۆری تایبەتی."
     },
-    priceNumber: 58,
+    priceNumber: 108,
     currency: "USD",
-    price: "$58",
+    price: "$108",
     status: "available",
     keywords: {
       ar: "منفضة خشبية, منفضة أنتيك, ديكور كلاسيكي, قطعة تراثية, أثاث صغير, تحفة خشب",
@@ -891,9 +891,9 @@ export const FURNITURE_PRODUCTS = [
       en: "45 cm height × 15 cm base diameter",
       ku: "بەرزی 45 سم × قەطرى بنەما 15 سم"
     },
-    priceNumber: 92,
+    priceNumber: 150,
     currency: "USD",
-    price: "$92",
+    price: "$150",
     status: "available",
     keywords: {
       ar: "مصباح طاولة, قاعدة خزفية, إضاءة أنتيك, ديكور كلاسيكي, أباجورة قديمة, إضاءة دافئة",
@@ -1085,9 +1085,9 @@ export const FURNITURE_PRODUCTS = [
       en: "Approximate height: 190 cm",
       ku: "بەرزی نزیکەیی: 190 سم"
     },
-    priceNumber: 231,
+    priceNumber: 675,
     currency: "USD",
-    price: "$231",
+    price: "$675",
     status: "available",
     keywords: {
       ar: "ساعة بريطانية, ساعة جدارية, أثاث كلاسيكي, ساعة خشبية, بندول نحاسي, ديكور فاخر",
@@ -1123,9 +1123,9 @@ export const FURNITURE_PRODUCTS = [
       en: "Approximate height: 75 cm",
       ku: "بەرزی نزیکەیی: 75 سم"
     },
-    priceNumber: 154,
+    priceNumber: 250,
     currency: "USD",
-    price: "$154",
+    price: "$250",
     status: "available",
     keywords: {
       ar: "طاولة عرض, طاولة خشبية, أثاث كلاسيكي, طاولة تحف, ديكور داخلي, مائدة جانبية",
@@ -1336,9 +1336,9 @@ export const FURNITURE_PRODUCTS = [
       en: "A traditional English wooden bridal chest featuring hand-applied colorful ceramic inlays. Rich in geometric and floral detailing, originally used for storing bridal belongings, and now valued as a rare heritage furniture piece with strong artistic presence.",
       ku: "محملێکی دارینی کلاسیکی بە شێوازی ئینگلیزی، بە نەقشی سێرامیکی دەستی ڕەنگاوڕەنگ. بۆ هەڵگرتنی شتومەکی بووک یان وەک کەلوپەلی مێژوویی هونەری."
     },
-    priceNumber: 962,
+    priceNumber: 1500,
     currency: "USD",
-    price: "$962",
+    price: "$1,500",
     status: "available",
     keywords: {
       ar: "محمل عروس, صندوق عروس, أثاث إنكليزي, تطعيم سيراميك, صندوق تراثي, ديكور تاريخي",

@@ -16,9 +16,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An original artwork by Iraqi artist Ali Naama, created in 2014. Condition: excellent.",
       ku: "تابلۆیەکی ڕەسەن لە هونەرمەندی عێراقی عەلی نەعمة، ساڵی 2014. دۆخ: زۆر باش."
     },
-    priceNumber: 900000,
-    currency: "IQD",
-    price: "900,000 د.ع",
+    priceNumber: 900,
+    currency: "usd",
+    price: "$900",
     status: "available",
     keywords: {
       ar: "",
@@ -49,9 +49,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "A rare 18th-century artwork executed in oil on wood, depicting a classic scene rich in detail and movement. Framed in a luxurious gold frame that reflects the era’s style. The painting is unsigned, as was common for many works of that period. An exceptional museum-grade piece with high artistic and historical value.",
       ku: "تابلۆیەکی دەگمەن لە سەدەی 18 ـەوە، بە تەکنیکی نەوت لەسەر دار درووستکراوە، دیمەنێکی کلاسیکی پڕ لە وردەکاری و جوڵان پیشان دەدات. بە چوارچێوەی زێڕینی لوکس چوارچێوەکراوە کە شێوازی ئەو قۆناغە دەردەخات. تابلۆکە واژۆ نەکراوە وەک زۆر کارەکانی ئەو دەمە. پارچەیەکی مۆزەیی تایبەت بە بەهای هونەری و مێژوویی بەرز."
     },
-    priceNumber: 45000000,
+    priceNumber: 45000,
     currency: "IQD",
-    price: "45,000,000 د.ع",
+    price: "45,000 د.ع",
     status: "available",
     keywords: {
       ar: "",
@@ -82,9 +82,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An artwork portraying a scene from Iraq’s Marshlands, capturing the calm atmosphere and the region’s distinctive watery nature with poetic visual details. Framed in an elegant bronze frame that adds a refined classic presence. Size: 100 cm (H) × 150 cm (W), approximately 30 years old—making it a documentary and cultural piece suitable for museum display or refined heritage spaces.",
       ku: "تابلۆیەکی هونەری کە دیمەنێک لە هۆورەکانی عێراق پیشان دەدات، ئارامی و سروشتی ئاویەتی تایبەتی ناوچەکە لەگەڵ وردەکاری شاعیرانە دەگرێتەوە. بە چوارچێوەی برۆنزی جوان چوارچێوەکراوە کە دەرکەوتنی کلاسیکی بەرز دەدات. قەبارە: 100 سم بەرزی × 150 سم پانی، تەمەنی نزیکەی 30 ساڵ؛ پارچەیەکی بەڵگەنامەیی و کەلتووری گونجاو بۆ مۆزە یان شوێنە میراثییەکان."
     },
-    priceNumber: 3000000,
+    priceNumber: 3000,
     currency: "IQD",
-    price: "3,000,000 د.ع",
+    price: "$3,000",
     status: "available",
     keywords: {
       ar: "",
@@ -115,9 +115,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An artistic painting depicting a farrier scene in a rural setting, reflecting daily life and folk heritage through a realistic expressive style. Condition: very good.",
       ku: "تابلۆیەکی هونەری کە دیمەنێکی بايتار لە ژینگەیەکی گوندی پیشان دەدات، ژیانی ڕۆژانە و میراثی گەلەکی بە شێوازی ڕاستەقینە و دەربڕینەوە نیشان دەدات. دۆخ: زۆر باش."
     },
-    priceNumber: 9999000,
-    currency: "IQD",
-    price: "9,999,000 د.ع",
+    priceNumber: 999,
+    currency: "usd",
+    price: "999",
     status: "available",
     keywords: {
       ar: "",
@@ -149,9 +149,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An old European painting depicting a historical maritime scene, hand-painted by an Italian artist, framed in a luxurious classical ceramic frame and accompanied by Victorian bronze candelabras. Age: over 80 years. Condition: very good considering its age.",
       ku: "تابلۆیەکی کۆنی ئەوروپی کە دیمەنێکی دەریایی مێژوویی پیشان دەدات، بە دەست هونەرمەندێکی ئیتاڵیایی ڕەسراوە، لە چوارچێوەیەکی سێرامیکی کلاسیکی فاخر و لەگەڵ شەمعدانە برۆنزییە فکتۆرییەکان. تەمەن: زیاتر لە ٨٠ ساڵ. دۆخ: زۆر باش بە پێی تەمەنی پارچەکە."
     },
-    priceNumber: 4500000,
-    currency: "IQD",
-    price: "4,500,000 د.ع",
+    priceNumber: 7999,
+    currency: "usd",
+    price: "$7,999",
     status: "available",
     keywords: {
       ar: "",
@@ -186,9 +186,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An old antique painting executed on canvas, dating back over 60 years. It reflects a classical character and calm artistic taste, suitable for heritage or artistic spaces.",
       ku: "تابلۆیەکی کۆن و ئەنتیک لەسەر کانڤاس دروستکراو، زیاتر لە ٦٠ ساڵ تەمەن هەیە و ڕەنگی کلاسیکی و هەستی هونەری ئارام پیشان دەدات، گونجاوە بۆ شوێنە میراثییەکان."
     },
-    priceNumber: 750000,
-    currency: "IQD",
-    price: "750,000 د.ع",
+    priceNumber: 750,
+    currency: "usd",
+    price: "$750",
     status: "available",
     keywords: {
       ar: "",
@@ -222,9 +222,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An original fine art painting executed in a realistic expressive style, depicting a traditional social scene with folk attire and calm colors that reflect daily life and an Eastern spirit. Framed in a handcrafted wooden frame adorned with delicate carvings that add depth and elegance to the artwork. The painting and frame form a cohesive artistic unit, suitable for museum display or fine art collectors. Square dimensions of 90 × 90 cm give it a strong visual presence.",
       ku: "تابلۆیەکی هونەری ڕەسەن بە شێوازی ڕاستەقینە–دەربڕینی وێنەکراو، کە دیمەنێکی کۆمەڵایەتی نەریتی بە جل‌وبەرگی گەلی و ڕەنگە ئارامەکان پیشان دەدات و ژیانی ڕۆژانە و ڕووحی ڕۆژهەڵات دەگوازێتەوە. لە ناو چوارچێوەیەکی دارێکی بە دەست دروستکراو و ڕازێنراو دانراوە کە بە نەخشە وردەکان قووڵی و فەخمی بۆ کارەکە زیاد دەکات. تابلۆ و چوارچێوەکە یەکەیەکی هونەری تەواو پێکدەهێنن، گونجاو بۆ پیشاندانی مۆزەیی یان کۆکردنەوەی کۆلێکتۆرە هونەرییەکان. قەبارەی چوارگۆشە ٩٠ × ٩٠ سم ئامادەییەکی بینراوی بەهێز پێدەدات."
     },
-    priceNumber: 9000000,
+    priceNumber: 6000,
     currency: "IQD",
-    price: "9,000,000 د.ع",
+    price: "6000 د.ع",
     status: "available",
     keywords: {
       ar: "",
@@ -256,9 +256,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An original French painting in a classical style depicting a cavalry rider in traditional military attire on horseback. Executed with high precision and balanced color details, it reflects the spirit of European chivalry in the 19th century. Framed in an elegant wooden frame with an inner burgundy lining that adds depth and sophistication. A distinguished piece suitable for museum display or fine art collectors, with dimensions of 45 × 30 cm.",
       ku: "تابلۆیەکی فەرەنسی ڕەسەن بە شێوازی کلاسیکی کە فاریسێک بە جل‌وبەرگی سەربازی نەریتی لەسەر ئەسپ پیشان دەدات. بە وردی بەرز و ڕەنگدانێکی هاوسەنگ وێنەکراوە و ڕووحی فروسەتی ئەورووپی لە سەدەی نۆزدەهەم دەگوازێتەوە. لە ناو چوارچێوەیەکی دارێکی جوان دانراوە بە پێچەوانەی ناوەوەیی بە ڕەنگی عەننابی کە قووڵی و فەخمی بۆ کارەکە زیاد دەکات. پارچەیەکی دیاریکراو بۆ پیشاندانی مۆزەیی یان کۆکردنەوەی کۆلێکتۆرە هونەرییەکان، بە قەبارەی ٤٥ × ٣٠ سم."
     },
-    priceNumber: 170000,
-    currency: "IQD",
-    price: "170,000 د.ع",
+    priceNumber: 170,
+    currency: "usd",
+    price: "$170",
     status: "available",
     keywords: {
       ar: "",
@@ -295,9 +295,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "120 × 80 cm (approx.)",
       ku: "١٢٠ × ٨٠ سم (نزیكەیی)"
     },
-    priceNumber: 350000,
-    currency: "IQD",
-    price: "350,000د.ع",
+    priceNumber: 350,
+    currency: "usd",
+    price: "$350",
     status: "available",
     keywords: {
       ar: "",
@@ -340,9 +340,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "200 cm (W) × 120 cm (H)",
       ku: "٢٠٠ سم پانی × ١٢٠ سم بەرزی"
     },
-    priceNumber: 13000000,
-    currency: "IQD",
-    price: "13,000,000 دينار عراقي",
+    priceNumber: 13000,
+    currency: "usd",
+    price: "$13,000",
     status: "available",
     keywords: {
       ar: "",
@@ -384,9 +384,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "An original artwork depicting horses in dynamic motion, executed in a classical expressive style and hand-signed by Iraqi artist Yahya Al-Darraji.",
       ku: "تابلۆیەکی هونەری ڕەسەن کە جوڵەی ئەسپ پیشان دەدات، بە شێوازی کلاسیکی و واژۆی دەستی هونەرمەند."
     },
-    priceNumber: 2250000,
+    priceNumber: 2250 ,
     currency: "IQD",
-    price: "2,250,000 د.ع",
+    price: "$2,250",
     status: "available",
     keywords: {
       ar: "لوحات, Art, تابلۆ, horse painting, signed art, iraqi artist, fine art gallery, original artwork",
@@ -423,9 +423,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "90 cm height × 140 cm width",
       ku: "بەرزی 90 سم × پانی 140 سم"
     },
-    priceNumber: 1600000,
+    priceNumber: 665,
     currency: "IQD",
-    price: "1,600,000 د.ع",
+    price: "665د.ع",
     status: "available",
     keywords: {
       ar: "لوحة فنية قديمة, مشهد سوق شرقي, لوحة تراثية, تحف فنية, antique market painting, oriental street art, تابلۆی کۆن",
@@ -440,7 +440,7 @@ export const PAINTINGS_PRODUCTS = [
     image: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/hoa-art-275_k12dvy"
   },
   {
-    id: "HOA-ART-312",
+    id: "HOA-ART-314",
     category: {
       ar: "لوحات",
       en: "Paintings",
@@ -461,9 +461,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 450000,
-    currency: "IQD",
-    price: "450,000 د.ع",
+       priceNumber: 665,
+    currency: "usd",
+    price: "$665",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد أنثوي, لوحة مائية, فنان اوميد, لوحة اصلية, female figure painting, watercolor sketch, omid artist",
@@ -500,9 +500,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 45 cm — Width: 32 cm",
       ku: "بەرزی: 45 سم — پانی: 32 سم"
     },
-    priceNumber: 3750000,
-    currency: "IQD",
-    price: "3,750,000 د.ع",
+    priceNumber: 550,
+    currency: "usd",
+    price: "$550",
     status: "available",
     keywords: {
       ar: "لوحة, لوحة فنية, سلمان راضي, لوحة تجريدية, بورتريه فني, abstract portrait painting, Salman Radi artwork",
@@ -539,9 +539,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1000000,
+    priceNumber: 667,
     currency: "IQD",
-    price: "1,000,000 د.ع",
+    price: "667 د.ع",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد أنثوي, لوحة مائية, فنان اوميد, لوحة اصلية, watercolor painting, figure study, Omid artist",
@@ -578,9 +578,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 45 cm — Width: 32 cm",
       ku: "بەرزی: 45 سم — پانی: 32 سم"
     },
-    priceNumber: 3000000,
-    currency: "IQD",
-    price: "3,000,000 د.ع",
+    priceNumber: 500,
+    currency: "usd",
+    price: "$500",
     status: "available",
     keywords: {
       ar: "لوحة فنية, سلمان راضي, لوحة بورتريه, لوحة تعبيرية, لوحة عراقية, Salman Radi painting, expressionist portrait",
@@ -616,9 +616,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 32 cm — Width: 28 cm",
       ku: "بەرزی: 32 سم — پانی: 28 سم"
     },
-    priceNumber: 850000,
-    currency: "IQD",
-    price: "850,000 د.ع",
+    priceNumber: 640,
+    currency: "usd",
+    price: "$640",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد أنثوي, لوحة مائية, فنان اوميد, لوحة اصلية, watercolor painting, figure study, Omid artist",
@@ -655,9 +655,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 950000,
-    currency: "IQD",
-    price: "950,000 د.ع",
+    priceNumber: 630,
+    currency: "usd",
+    price: "$630",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة امرأة, لوحة نافذة, لوحة مائية, فنان اوميد, لوحة اصلية, watercolor painting, Omid artist",
@@ -694,9 +694,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 900000,
+    priceNumber: 699,
     currency: "IQD",
-    price: "900,000 د.ع",
+    price: "699 د.ع",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة امرأة, لوحة تعبيرية, لوحة مائية, فنان اوميد, لوحة اصلية, watercolor painting, Omid artist",
@@ -733,9 +733,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 900000,
-    currency: "IQD",
-    price: "900,000 د.ع",
+    priceNumber: 599,
+    currency: "usd",
+    price: "$599",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد أنثوي, لوحة مائية, فنان اوميد, لوحة اصلية, watercolor painting, omid artist",
@@ -773,9 +773,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1000000,
-    currency: "IQD",
-    price: "1,000,000 د.ع",
+    priceNumber: 677,
+    currency: "usd",
+    price: "$677",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد, اوميد, لوحة مائية, فن معاصر, omid painting, watercolor figure",
@@ -814,9 +814,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 650,
+    currency: "usd",
+    price: "$650",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد, اوميد, لوحة مائية, دراسة فنية, omid painting, watercolor figure",
@@ -855,9 +855,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 677,
+    currency: "usd",
+    price: "$677",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد, اوميد, لوحة مائية, دراسة فنية, omid painting, watercolor figure",
@@ -896,9 +896,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 600,
+    currency: "usd",
+    price: "$600",
     status: "available",
     keywords: {
       ar: "لوحة فنية, لوحة جسد, اوميد, لوحة مائية, دراسة فنية, omid painting, watercolor figure",
@@ -937,9 +937,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 620,
+    currency: "usd",
+    price: "$620",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة جسد, لوحة مائية, لوحة مع مزهرية, omid painting, watercolor figure",
@@ -1017,9 +1017,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 700,
+    currency: "usd",
+    price: "$700",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة جسد, لوحة مائية, لوحة حبر, omid painting, figurative art",
@@ -1058,9 +1058,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 699,
+    currency: "usd",
+    price: "$699",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة حبر, لوحة مائية, omid painting, figurative art",
@@ -1098,9 +1098,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 699,
+    currency: "usd",
+    price: "$699",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة حبر, لوحة مائية, figurative art, omid painting",
@@ -1138,9 +1138,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 700,
+    currency: "usd",
+    price: "$700",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة موسيقى, لوحة حبر, لوحة مائية, omid painting",
@@ -1178,9 +1178,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 620,
+    currency: "usd",
+    price: "$620",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة جسد, لوحة حبر, لوحة مائية, omid painting",
@@ -1218,9 +1218,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
+    priceNumber: 687,
     currency: "IQD",
-    price: "1,250,000 د.ع",
+    price: "687 د.ع",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة تعبيرية, لوحة نساء, لوحة حبر, لوحة مائية, omid painting",
@@ -1258,9 +1258,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 670,
+    currency: "usd",
+    price: "$670",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة جسد, لوحة نساء, لوحة حبر, لوحة مائية, omid painting",
@@ -1298,9 +1298,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 699,
+    currency: "usd",
+    price: "$699",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة تعبيرية, لوحة حبر, لوحة مائية, omid painting",
@@ -1338,9 +1338,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 678,
+    currency: "usd",
+    price: "$678",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة تعبيرية, لوحة حبر, لوحة مائية, omid painting",
@@ -1378,9 +1378,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 680,
+    currency: "usd",
+    price: "$680",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة تعبيرية, لوحة حبر, لوحة مائية, omid painting",
@@ -1418,9 +1418,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 620,
+    currency: "usd",
+    price: "$620",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة تعبيرية, لوحة حبر, لوحة مائية, omid painting",
@@ -1458,9 +1458,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 42 cm — Width: 28 cm",
       ku: "بەرزی: 42 سم — پانی: 28 سم"
     },
-    priceNumber: 1250000,
-    currency: "IQD",
-    price: "1,250,000 د.ع",
+    priceNumber: 680,
+    currency: "usd",
+    price: "$680",
     status: "available",
     keywords: {
       ar: "لوحة فنية, اوميد, لوحة نساء, لوحة تعبيرية, لوحة حبر, لوحة مائية, omid painting",
@@ -1539,9 +1539,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 32 cm — Width: 38 cm",
       ku: "بەرزی: 32 سم — پانی: 38 سم"
     },
-    priceNumber: 999000,
-    currency: "IQD",
-    price: "999,000 د.ع",
+    priceNumber: 730,
+    currency: "usd",
+    price: "$730",
     status: "available",
     keywords: {
       ar: "لوحة خيول, لوحة فنية, اوميد, لوحة تعبيرية, watercolor horse painting, omid painting",
@@ -1580,9 +1580,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 32 cm — Width: 38 cm",
       ku: "بەرزی: 32 سم — پانی: 38 سم"
     },
-    priceNumber: 1100000,
-    currency: "IQD",
-    price: "1,100,000 د.ع",
+    priceNumber: 690,
+    currency: "usd",
+    price: "$690",
     status: "available",
     keywords: {
       ar: "لوحة بغداد, شناشيل بغداد, لوحة معمارية, اوميد, watercolor city painting, baghdad architecture painting",
@@ -1621,9 +1621,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 32 cm — Width: 38 cm",
       ku: "بەرزی: 32 سم — پانی: 38 سم"
     },
-    priceNumber: 1100000,
-    currency: "IQD",
-    price: "1,100,000 د.ع",
+    priceNumber: 690,
+    currency: "usd",
+    price: "$690",
     status: "available",
     keywords: {
       ar: "لوحة بغداد, شناشيل بغداد, لوحة معمارية, اوميد, watercolor baghdad, baghdad architecture painting",
@@ -1662,9 +1662,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 50 cm — Width: 35 cm",
       ku: "بەرزی: 50 سم — پانی: 35 سم"
     },
-    priceNumber: 0,
-    currency: "IQD",
-    price: "",
+    priceNumber: 750,
+    currency: "usd",
+    price: "$750",
     status: "available",
     keywords: {
       ar: "لوحة فنية, سعد, لوحة مائية, watercolor figure painting, saad artist",
@@ -1702,9 +1702,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 30 cm — Width: 20 cm",
       ku: "بەرزی: 30 سم — پانی: 20 سم"
     },
-    priceNumber: 0,
-    currency: "IQD",
-    price: "",
+    priceNumber: 650,
+    currency: "usd",
+    price: "$650",
     status: "available",
     keywords: {
       ar: "لوحة فنية, سعد, فتاة وحصان, watercolor figure painting, saad artist",
@@ -1742,9 +1742,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 35 cm — Width: 25 cm",
       ku: "بەرزی: 35 سم — پانی: 25 سم"
     },
-    priceNumber: 750000,
-    currency: "IQD",
-    price: "750,000 د.ع",
+    priceNumber: 630,
+    currency: "usd",
+    price: "$630",
     status: "available",
     keywords: {
       ar: "لوحة فنية, سعد, لوحة مدينة, watercolor street scene, saad painting",
@@ -1782,9 +1782,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 34 cm — Width: 25 cm",
       ku: "بەرزی: 34 سم — پانی: 25 سم"
     },
-    priceNumber: 1200000,
+    priceNumber: 1200,
     currency: "IQD",
-    price: "1,200,000 د.ع",
+    price: "1,200 د.ع",
     status: "available",
     keywords: {
       ar: "لوحة سوق, لوحة مدينة, لوحة فنية, سعد, watercolor market scene, saad painting",
@@ -1824,9 +1824,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 33 cm — Width: 30 cm",
       ku: "بەرزی: 33 سم — پانی: 30 سم"
     },
-    priceNumber: 1450000,
-    currency: "IQD",
-    price: "1,450,000 د.ع",
+    priceNumber: 1450,
+    currency: "usd",
+    price: "$1,450",
     status: "available",
     keywords: {
       ar: "لوحة سوق قديم, حسين العزاوي, لوحة مدينة, watercolor market scene, Iraqi art painting",
@@ -1866,9 +1866,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 40 cm — Width: 30 cm",
       ku: "بەرزی: 40 سم — پانی: 30 سم"
     },
-    priceNumber: 2000000,
+    priceNumber: 599,
     currency: "IQD",
-    price: "2,000,000 د.ع",
+    price: "599 د.ع",
     status: "available",
     keywords: {
       ar: "لوحة معمارية, دمشق, سوريا, سعيد سليم, رسم حبر, ink architectural drawing, middle eastern architecture",
@@ -1909,9 +1909,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 35 cm — Width: 25 cm",
       ku: "بەرزی: 35 سم — پانی: 25 سم"
     },
-    priceNumber: 2600000,
-    currency: "IQD",
-    price: "2,600,000 د.ع",
+    priceNumber: 590,
+    currency: "usd",
+    price: "$590",
     status: "available",
     keywords: {
       ar: "لوحة تعبيرية, الفن العراقي المعاصر, Saad artist, expressionist painting, Iraqi contemporary art",
@@ -1950,9 +1950,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 50 cm — Width: 35 cm",
       ku: "بەرزی: 50 سم — پانی: 35 سم"
     },
-    priceNumber: 950000,
-    currency: "IQD",
-    price: "950,000 د.ع",
+    priceNumber: 950,
+    currency: "usd",
+    price: "$950",
     status: "available",
     keywords: {
       ar: "لوحة فنية, طالب جبار, لوحة تعبيرية, حبر اسود, جسد انثوي, فن عراقي, talib jabbar, expressionist painting, ink drawing",
@@ -1991,9 +1991,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 50 cm — Width: 35 cm",
       ku: "بەرزی: 50 سم — پانی: 35 سم"
     },
-    priceNumber: 950000,
-    currency: "IQD",
-    price: "950,000 د.ع",
+    priceNumber: 950,
+    currency: "usd",
+    price: "$950",
     status: "available",
     keywords: {
       ar: "لوحة فنية, طالب جبار, حصان مجنح, فن تعبيري, رسم بالحبر, فن عراقي, talib jabbar painting, surreal ink drawing",
@@ -2031,9 +2031,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 50 cm — Width: 35 cm",
       ku: "بەرزی: 50 سم — پانی: 35 سم"
     },
-    priceNumber: 950000,
-    currency: "IQD",
-    price: "950,000 د.ع",
+    priceNumber: 950,
+    currency: "usd",
+    price: "$950",
     status: "available",
     keywords: {
       ar: "طالب جبار, فن عراقي, رسم بالحبر, لوحة حبر, talib jabbar, iraqi art, ink drawing",
@@ -2071,9 +2071,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 50 cm — Width: 25 cm",
       ku: "بەرزی: 50 سم — پانی: 25 سم"
     },
-    priceNumber: 950000,
-    currency: "IQD",
-    price: "950,000 د.ع",
+    priceNumber: 950,
+    currency: "usd",
+    price: "$950",
     status: "available",
     keywords: {
       ar: "سعد التميمي, لوحة فنية, فن عراقي, رسم مائي, watercolor artwork, saad tamimi",
@@ -2111,9 +2111,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 32 cm — Width: 26 cm",
       ku: "بەرزی: 32 سم — پانی: 26 سم"
     },
-    priceNumber: 850000,
-    currency: "IQD",
-    price: "850,000 د.ع",
+    priceNumber: 850,
+    currency: "usd",
+    price: "$850",
     status: "available",
     keywords: {
       ar: "سعد, لوحة بورتريه, فن عراقي, رسم مائي, portrait watercolor, iraqi art",
@@ -2161,9 +2161,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 26 cm — Width: 18 cm",
       ku: "بەرزی: 26 سم — پانی: 18 سم"
     },
-    priceNumber: 770000,
-    currency: "IQD",
-    price: "770,000 د.ع",
+    priceNumber: 770,
+    currency: "usd",
+    price: "$770",
     status: "available",
     keywords: {
       ar: "سعد التميمي, لوحة بورتريه, فن عراقي, رسم مائي, watercolor portrait, iraqi art",
@@ -2212,9 +2212,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 36 cm — Width: 28 cm",
       ku: "بەرزی: 36 سم — پانی: 28 سم"
     },
-    priceNumber: 580000,
-    currency: "IQD",
-    price: "580,000 د.ع",
+    priceNumber: 580,
+    currency: "usd",
+    price: "$580",
     status: "available",
     keywords: {
       ar: "سعيد, لوحة طبيعة, رسم مائي, منظر بحري, watercolor landscape, iraqi art",
@@ -2263,9 +2263,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 30 cm — Width: 25 cm",
       ku: "بەرزی: 30 سم — پانی: 25 سم"
     },
-    priceNumber: 1000000,
-    currency: "IQD",
-    price: "1,000,000 د.ع",
+    priceNumber: 676,
+    currency: "usd",
+    price: "$676",
     status: "available",
     keywords: {
       ar: "سعيد, لوحة خيول, رسم مائي, فن عراقي, watercolor horses, iraqi art",
@@ -2312,9 +2312,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 36 cm — Width: 25 cm",
       ku: "بەرزی: 36 سم — پانی: 25 سم"
     },
-    priceNumber: 995000,
-    currency: "IQD",
-    price: "995,000 د.ع",
+    priceNumber: 995,
+    currency: "usd",
+    price: "$995",
     status: "available",
     keywords: {
       ar: "سعيد, لوحة موسيقى, عازفة كمان, رسم مائي, watercolor figure, iraqi art",
@@ -2362,9 +2362,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 26 cm — Width: 18 cm",
       ku: "بەرزی: 26 سم — پانی: 18 سم"
     },
-    priceNumber: 800000,
-    currency: "IQD",
-    price: "800,000 د.ع",
+    priceNumber: 800,
+    currency: "usd",
+    price: "$800",
     status: "available",
     keywords: {
       ar: "سعيد التميمي, لوحة بدوية, رسم مائي, منظر صحراوي, watercolor landscape, iraqi art",
@@ -2412,9 +2412,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 26 cm — Width: 18 cm",
       ku: "بەرزی: 26 سم — پانی: 18 سم"
     },
-    priceNumber: 850000,
-    currency: "IQD",
-    price: "850,000 د.ع",
+    priceNumber: 850,
+    currency: "usd",
+    price: "$850",
     status: "available",
     keywords: {
       ar: "سعيد التميمي, لوحة طبيعة, رسم مائي, منظر طبيعي, watercolor landscape, iraqi art",
@@ -2462,9 +2462,9 @@ export const PAINTINGS_PRODUCTS = [
       en: "Height: 32 cm — Width: 24 cm",
       ku: "بەرزی: 32 سم — پانی: 24 سم"
     },
-    priceNumber: 750000,
-    currency: "IQD",
-    price: "750,000 د.ع",
+    priceNumber: 750,
+    currency: "usd",
+    price: "$750",
     status: "available",
     keywords: {
       ar: "سعيد التميمي, لوحة انسانية, رسم مائي, فن عراقي, watercolor figure, iraqi art",
